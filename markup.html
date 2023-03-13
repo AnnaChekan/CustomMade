@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#188de7">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>Главная</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="assets/js/jQuery3.6.1.js"></script>
+</head>
+
+<body>
+
+    <div class='thetop'></div>
+    <div class='scrolltop'>
+        <div class='muve-top'></div>
+    </div>
+    <header>
+        <a href="markup.html" class="markup-link">markup</a>
+        <nav class="container navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+        <!--<img src="assets/img/logo.png" alt="logo">-->
+        <picture>
+          <source media="(min-width:992px)" srcset="assets/img/logo.png">
+          <!--<source media="(min-width:768px)" srcset="assets/img/logo-tablet.png">-->
+          <img src="assets/img/logo-mob.png" alt="logo">
+        </picture>
+      </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="about-studio.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Цены</a>
+                        </li>
+                    </ul>
+                    <div class="town">Санкт-Петербург ул. Уральская, 13</div>
+                    <button type="button" class="btn btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeader">
+                        Заказать проект
+                    </button>
+                    <div class="modal fade" id="exampleModalToggleHeader" tabindex="-1" aria-labelledby="exampleModalToggleLabelHeader" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalToggleLabelHeader">Заказать проект</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        Разрешите нам познакомиться с вами и узнать о вашем проекте. Мы подготовим для вас индивидуальное предложение.
+                                    </div>
+                                    <form class="modal-body-form">
+                                        <div class="modal-body-form-item">
+                                            <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                        </div>
+                                        <div class="modal-body-form-item">
+                                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                        </div>
+                                        <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeaderSent" data-bs-dismiss="modal" value="Отправить сообщение">
+                                    <!--<button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeaderSent" data-bs-dismiss="modal">Отправить сообщение</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggleHeaderSent" tabindex="-1" aria-labelledby="exampleModalLabelHeaderSent" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabelHeaderSent">Ваше сообщение отправлено!</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        <p>Спасибо за ваше обращение.</p>
+                                        <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="menu-toggler btn-menu" id="burgerMenu">
+                        <div class="burger-name">МЕНЮ</div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="nav-menu">
+                        <ul class="nav-menu-list" id="navMenu">
+                            <li class="nav-menu-item">
+                                <a href="about-studio.html" class="nav-menu-link">О нас</a>
+                            </li>
+                            <li class="nav-menu-item">
+                                <a href="services.html" class="nav-menu-link active-menu">Услуги
+                  <ul class="more-list">
+                    <li class="more-item">
+                      <a href="interior-design.html" class="more-link">Дизайн интерьера</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="finishing-works.html" class="more-link active-more">Отделочные работы</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="authors-supervision.html" class="more-link">Авторский надзор</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="decorating.html" class="more-link">Декорирование</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="reconnection-matching.html" class="more-link">Согласование перепланировки</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="architectural-engineering.html" class="more-link">Архитектурное проектирование</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="designer-furnitur.html" class="more-link">Авторская мебель</a>
+                            </li>
+                        </ul>
+                </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">Стоимость</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="portfolio.html" class="nav-menu-link">Портфолио</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="blog.html" class="nav-menu-link">Блог</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="contacts.html" class="nav-menu-link">Контакты</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main class="wrapper markup">
+        <div class="container">
+            <ol class="row">
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>Brand color </h2>
+                    <div class="brand-bg-1"></div>
+                    <div class="brand-bg-2"></div>
+                    <div class="brand-bg-3"></div>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12 site-map">
+                    <h2>Site map</h2>
+                    <ol>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about-studio.html">О нас</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                        <li><a href="#">Цены</a></li>
+                        <li><a href="markup.html">markup.html</a></li>
+                    </ol>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>Color,W bold, italik, link, ::selection</h2>
+                    <p><b>Изумрудная сеть — сеть охраняемых природных территорий, т.н. территорий особого</b> (общеевропейского) природоохранного значения (ТОПЗ). <i>The Emerald network is a network of Areas of Special Conservation Interest to conserve</i> wild <a href="" >flora and fauna</a> and their natural habitats of Europe, which was launched in 1989 by the Council of Europe as part of its work under the Convention on the Conservation of European Wildlife and Natural Habitats or Bern Convention.</p>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>Font-family</h2>
+                    <div class="markup-primary-font">Font-family: 'Montserrat'</div>
+                    <div class="markup-secondary-font">Font-family: 'Nunito'</div>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>Font-weight </h2>
+                    <ol>
+                        <li class="font-weight-light_m">font-weight-light ('Montserrat') - Текст текст // The Emerald network is a network of Areas of Special Conservation Interest to conserve wild flora and fauna and their natural habitats of Europe.</li>
+                        <li class="font-weight-regular_m">font-weight-regular ('Montserrat') - Текст текст / The Emerald network is a network of Areas of Special Conservation Interest to conserve wild flora and fauna and their natural habitats of Europe.</li>
+                        <li class="font-weight-medium_m">font-weight-medium ('Montserrat') - The Emerald network is a network of Areas of Special Conservation Interest to conserve wild flora and fauna and their natural habitats of Europe.</li>
+                        <li class="font-weight-semibold_m">font-weight-semibold ('Montserrat') - The Emerald network is a network of Areas of Special Conservation Interest to conserve wild flora and fauna and their natural habitats of Europe.</li>
+                        <li class="font-weight-bold_m">font-weight-bold ('Montserrat')- The Emerald network is a network of Areas of Special Conservation Interest to conserve wild flora and fauna and their natural habitats of Europe.</li>
+                        <li class="font-weight-light_n">font-weight-light ('Nunito') - Текст текст / The Emerald network is a network of Areas of Special Conservation Interest to conserve wild flora and fauna and their natural habitats of Europe.</li>
+                    </ol>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2> Title h1-h6</h2>
+                    <h1>h1 - Test title <small>Small test</small></h1>
+                    <h2>h2 - Test title <small>Small test</small></h2>
+                    <h3>h3 - Test title <small>Small test</small></h3>
+                    <h4>h4 - Test title <small>Small test</small></h4>
+                    <h5>h5 - Test title <small>Small test</small></h5>
+                    <h6>h6 - Test title <small>Small test</small></h6>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <div class="title-5"> text style h1-h6</div>
+                    <div class="title-1">h1 - Test title <small>Small test</small></div>
+                    <div class="title-2">h2 - Test title <small>Small test</small></div>
+                    <div class="title-3">h3 - Test title <small>Small test</small></div>
+                    <div class="title-4">h4 - Test title <small>Small test</small></div>
+                    <div class="title-5">h5 - Test title <small>Small test</small></div>
+                    <div class="title-6">h6 - Test title <small>Small test</small></div>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>checkbox, radiobutton</h2>
+                    <p>
+                        <input id="checkbox" type="checkbox" name="terms" checked="checked">
+                        <label for="checkbox">варинат 1</label>
+                        <input type="hidden" name="terms-field" value="1">
+                    </p>
+                    <p>
+                        <input id="checkbox2" type="checkbox" name="terms">
+                        <label for="checkbox2">варинат 2</label>
+                        <input type="hidden" name="terms-field" value="1">
+                    </p>
+                    <p>
+                        <input id="checkbox3" type="checkbox" name="terms">
+                        <label for="checkbox3">варинат 3</label>
+                        <input type="hidden" name="terms-field" value="1">
+                    </p>
+                    <p>
+                        <input type="radio" id="contactChoice1" name="contact" value="email">
+                        <label for="contactChoice1">Email</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="contactChoice2" name="contact" value="phone">
+                        <label for="contactChoice2">Phone</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="contact" id="contactChoice3" value="flat">
+                        <label for="contactChoice3">Доставка курьером </label>
+                    </p>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>button link</h2>
+                    <a href="#" class="btn btn-primary">Заказать проект</a>
+                    <a href="#" class="btn btn-secondary">Подробнее</a>
+                    <a href="#" class="btn btn-success">Смотреть все работы</a>
+                    <a href="#" class="btn btn-danger">Задать вопрос</a>
+                    <a href="#" class="btn btn-warning">Смотреть все отзывы</a>
+                    <a href="#" class="btn btn-equipmen">Скачать комплектацию</a>
+                    <!--<a href="#" class="btn btn-light">Light</a>
+                <a href="#" class="btn btn-dark">Dark</a>
+                <a href="#" class="btn btn-link">Link</a>-->
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>button</h2>
+                    <button type="button" class="btn btn-primary">Заказать проект</button>
+                    <button type="button" class="btn btn-secondary">Подробнее</button>
+                    <button type="button" class="btn btn-success">Смотреть все работы</button>
+                    <button type="button" class="btn btn-danger">Задать вопрос</button>
+                    <button type="button" class="btn btn-warning">Смотреть все отзывы</button>
+                    <!--<button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-link">Link</button></li>-->
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>button input</h2>
+                    <input type="button" class="btn btn-primary" value="Заказать проект">
+                    <input type="button" class="btn btn-secondary" value="Подробнее">
+                    <input type="button" class="btn btn-success" value="Смотреть все работы">
+                    <input type="button" class="btn btn-danger" value="Задать вопрос">
+                    <input type="button" class="btn btn-warning" value="Смотреть все отзывы">
+                    <!--<input type="button" class="btn btn-info" value="Info">
+                <input type="button" class="btn btn-light" value="Light">
+                <input type="button" class="btn btn-dark" value="Dark">
+                <input type="button" class="btn btn-link" value="Link">-->
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>pop up</h2>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>scroll</h2>
+                    <div class="scroll">
+                        Изумрудная сеть — сеть охраняемых природных территорий, т.н. территорий особого(общеевропейского) природоохранного значения (ТОПЗ). The Emerald network is a network of Areas of Special Conservation Interest to conserve wild flora and fauna and their natural habitats of Europe, which was launched in 1989 by the Council of Europe as part of its work under the Convention on the Conservation of European Wildlife and Natural Habitats or Bern Convention. Изумрудная сеть — сеть охраняемых природных территорий, т.н. территорий особого(общеевропейского) природоохранного значения (ТОПЗ).
+                        The Emerald network is a network of Areas of Special Conservation Interest to conserve wild flora and fauna and their natural habitats of Europe, which was launched in 1989 by the Council of Europe as part of its work under the Convention on the Conservation of European Wildlife and Natural Habitats or Bern Convention.Изумрудная сеть — сеть охраняемых природных территорий, т.н. территорий особого(общеевропейского) природоохранного значения (ТОПЗ). The Emerald network is a network of Areas of Special Conservation Interest to conserve wild flora and fauna and their natural habitats of Europe,
+                        which was launched in 1989 by the Council of Europe as part of its work under the Convention on the Conservation of European Wildlife and Natural Habitats or Bern Convention. Изумрудная сеть — сеть охраняемых природных территорий, т.н. территорий особого(общеевропейского) природоохранного значения (ТОПЗ). The Emerald network is a network of Areas of Special Conservation Interest to conserve wild flora and fauna and their natural habitats of Europe, which was launched in 1989 by the Council of Europe as part of its work under the Convention on the Conservation of European Wildlife and Natural Habitats or Bern Convention.
+                    </div>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>range</h2>
+                    <from class="range">
+                        <div class="text"><output id="range_weight_disp">10 000</output><span>€</span></div>
+                        <input type="range" name="weight" id="range_weight" value="10000" min="5000" max="50000" oninput="range_weight_disp.value = range_weight.value">
+                    </from>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>popovers</h2>
+                    <!--<button type="button" class="btn-popovers" id="popover" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Вентиляция">
+                    <span></span>
+                    <span></span>
+                </button> -->
+
+                    <a tabindex="0" class="btn popovers" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" title data-bs-content="Вентиляция">
+                    <span></span>
+                    <span></span>
+                </a>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>accordion</h2>
+                    <!--<div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h4 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Вопрос 
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </h4>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <strong>text</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h4 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Вопрос 
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </h4>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <strong>text</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>search</h2>
+                    <form action="" method="get" class="search">
+                        <input name="s" placeholder="Введите марку" type="search">
+                        <button type="submit" class="btn btn-primary">искать</button>
+                    </form>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>range-slider</h2>
+                    <div class="range-slider">
+                        <input type="range" name="price_min" id="input-left" min="0" max="3000000" value="10000" />
+                        <input type="range" name="price_max" id="input-right" min="0" max="3000000" value="500000" />
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb left">
+                            </div>
+                            <div class="thumb right">
+                            </div>
+                        </div>
+                        <div class="thumb-info">
+                            <div class="thumb">
+                                <div class="thumb-text">от</div>
+                                <div class="price_value_min"></div>
+                            </div>
+                            <div class="thumb">
+                                <div class="thumb-text">до</div>
+                                <div class="price_value_max"></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>modal two windows</h2>
+                    <!--<button type="button" class="btn btn-success btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHww">
+                    Заказать дизайн
+                </button>
+
+                <div class="modal fade" id="exampleModalToggleHww" tabindex="-1" aria-labelledby="exampleModalToggleLabelHww" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title" id="exampleModalToggleLabelHww">Заказать проект</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-body-description">
+                                    Разрешите нам познакомиться с вами и узнать о вашем проекте. Мы подготовим для вас индивидуальное предложение.
+                                </div>
+                                <form class="modal-body-form">
+                                    <div class="modal-body-form-item">
+                                        <label for="fname"></label>
+                                        <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                    </div>
+                                    <div class="modal-body-form-item">
+                                        <label for="phone"></label>
+                                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                    </div>   
+                                    <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHwwSent" data-bs-dismiss="modal">Отправить сообщение</button>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+                <div class="modal fade" id="exampleModalToggleHwwSent" tabindex="-1" aria-labelledby="exampleModalLabelHwwSent" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title" id="exampleModalLabelHwwSent">Ваше сообщение отправлено!</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-body-description">
+                                    <p>Спасибо за ваше обращение.</p>
+                                    <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                                </div>                                       
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>modal one window</h2>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModalAdvice">
+                        Заказать звонок
+                    </button>
+
+                    <div class="modal fade" id="exampleModalAdvice" tabindex="-1" aria-labelledby="exampleModalLabelAdvice" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabelAdvice">Вы заказали обратный звонок!</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        <p>Спасибо за оставленную заявку.</p>
+                                        <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по интересующим вопросам.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Закрыть окно</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-lg-4 col-md-6 col-xs-12">
+                    <h2>Заголовок</h2>
+                    <!--<input type="button" class="btn btn-success btn-open" value="Заказать звонок">
+                <div class="card-block" id="examplSYouProject">
+                    <h2 class="card-block-title">Вы заказали обратный звонок!</h2>
+                    <div class="card-block-description">
+                        <p>Спасибо за оставленную заявку.</p>
+                        <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по интересующим вопросам.</p>
+                    </div>          
+                    <button type="button" class="btn btn-warning btn-close-card">Закрыть окно</button>
+                </div>-->
+                </li>
+            </ol>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <a href="index.html"><img class="footer-logo-img" src="assets/img/footer-logo.png"></a>
+                <div class="footer-logo-info">
+                    <span>2010-2022 Студия интерьера</span>
+                    <span>Custom Made, все права защищены</span>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleFooter">
+                Заказать звонок
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalToggleFooter" tabindex="-1" aria-labelledby="exampleModalToggleFooter" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalToggleFooter">Заказать звонок</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="modal-body-form">
+                                <div class="modal-body-form-item">
+                                    <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                </div>
+                                <div class="modal-body-form-item">
+                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                </div>
+                                <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalLabelFooterSent" data-bs-dismiss="modal" value="Отправить сообщение">
+                            <!--<button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalLabelFooterSent" data-bs-dismiss="modal">Отправить сообщение</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalLabelFooterSent" tabindex="-1" aria-labelledby="exampleModalLabelFooterSent" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLabelFooterSent">Вы заказали обратный звонок!</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-body-description">
+                                <p>Спасибо за ваше обращение.</p>
+                                <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <a class="footer-link" href="index.html">О нас</a>
+                    <a class="footer-link" href="portfolio.html">Портфолио</a>
+                    <a class="footer-link" href="#">Цены</a>
+                    <a class="footer-link" href="services.html">Услуги</a>
+                    <a class="footer-link" href="blog.html">Блог</a>
+                </div>
+                <div class="footer-links-column-two">
+                    <a class="footer-link" href="interior-design.html">Дизайн интерьера</a>
+                    <a class="footer-link" href="finishing-works.html">Отделочные работы</a>
+                    <a class="footer-link" href="authors-supervision.htm">Авторский надзор</a>
+                    <a class="footer-link" href="decorating.html">Декорирование</a>
+                    <a class="footer-link" href="reconnection-matching.html">Согласование перепланировки</a>
+                    <a class="footer-link" href="architectural-engineering.html">Архитектурное проектирование</a>
+                    <a class="footer-link" href="designer-furnitur.html">Авторская мебель</a>
+                </div>
+            </div>
+            <div class="footer-social-media">
+                <div class="footer-social-media-column">
+                    <div class="footer-social-media-item icon-email">cmade.spb@mail.ru</div>
+                    <div class="footer-social-media-item icon-inst">peterson.designer</div>
+                    <div class="footer-social-media-item icon-vk">peterson_designer</div>
+                </div>
+                <div class="footer-social-media-column">
+                    <div class="footer-social-media-item icon-telegram">@peterson.designer</div>
+                    <div class="footer-social-media-item icon-house">peterson.designer</div>
+                    <div class="footer-social-media-item icon-pinter">peterson.designer</div>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <div class="footer-contacts-item icon-local">
+                    <div class="city">Санкт-Петербург</div>
+                    <div class="city">ул. Уральская, 13</div>
+                </div>
+                <div class="footer-contacts-item icon-phone">
+                    <div class="phone">+7(905) 204-77-74</div>
+                    <div class="phone">+7(812) 715-02-75</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="assets/js/popper.min.js"></script>
+    <script defer src="assets/js/bootstrap.min.js"></script>
+    <script defer src="assets/js/slick.min.js"></script>
+    <script async src="assets/js/jquery.fancybox.min.js"></script>
+    <script defer src="assets/js/jquery.nice-select.min.js"></script>
+    <script defer src="assets/js/jquery-match-height.js"></script>
+    <script async src="assets/js/global.js"></script>
+
+</body>
+
+</html>

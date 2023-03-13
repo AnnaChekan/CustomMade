@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#188de7">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>Главная</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="assets/js/jQuery3.6.1.js"></script>
+</head>
+
+<body>
+
+    <div class='thetop'></div>
+    <div class='scrolltop'>
+        <div class='muve-top'></div>
+    </div>
+    <header>
+        <a href="markup.html" class="markup-link">markup</a>
+        <nav class="container navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+        <!--<img src="assets/img/logo.png" alt="logo">-->
+        <picture>
+          <source media="(min-width:992px)" srcset="assets/img/logo.png">
+          <!--<source media="(min-width:768px)" srcset="assets/img/logo-tablet.png">-->
+          <img src="assets/img/logo-mob.png" alt="logo">
+        </picture>
+      </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="about-studio.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Цены</a>
+                        </li>
+                    </ul>
+                    <div class="town">Санкт-Петербург ул. Уральская, 13</div>
+                    <button type="button" class="btn btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeader">
+                        Заказать проект
+                    </button>
+                    <div class="modal fade" id="exampleModalToggleHeader" tabindex="-1" aria-labelledby="exampleModalToggleLabelHeader" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalToggleLabelHeader">Заказать проект</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        Разрешите нам познакомиться с вами и узнать о вашем проекте. Мы подготовим для вас индивидуальное предложение.
+                                    </div>
+                                    <form class="modal-body-form">
+                                        <div class="modal-body-form-item">
+                                            <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                        </div>
+                                        <div class="modal-body-form-item">
+                                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                        </div>
+                                        <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeaderSent" data-bs-dismiss="modal" value="Отправить сообщение">
+                                    <!--<button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeaderSent" data-bs-dismiss="modal">Отправить сообщение</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggleHeaderSent" tabindex="-1" aria-labelledby="exampleModalLabelHeaderSent" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabelHeaderSent">Ваше сообщение отправлено!</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        <p>Спасибо за ваше обращение.</p>
+                                        <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="menu-toggler btn-menu" id="burgerMenu">
+                        <div class="burger-name">МЕНЮ</div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="nav-menu">
+                        <ul class="nav-menu-list" id="navMenu">
+                            <li class="nav-menu-item">
+                                <a href="about-studio.html" class="nav-menu-link">О нас</a>
+                            </li>
+                            <li class="nav-menu-item">
+                                <a href="services.html" class="nav-menu-link active-menu">Услуги
+                  <ul class="more-list">
+                    <li class="more-item">
+                      <a href="interior-design.html" class="more-link">Дизайн интерьера</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="finishing-works.html" class="more-link active-more">Отделочные работы</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="authors-supervision.html" class="more-link">Авторский надзор</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="decorating.html" class="more-link">Декорирование</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="reconnection-matching.html" class="more-link">Согласование перепланировки</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="architectural-engineering.html" class="more-link">Архитектурное проектирование</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="designer-furnitur.html" class="more-link">Авторская мебель</a>
+                            </li>
+                        </ul>
+                </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">Стоимость</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="portfolio.html" class="nav-menu-link">Портфолио</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="blog.html" class="nav-menu-link">Блог</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="contacts.html" class="nav-menu-link">Контакты</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main class="wrapper architectural-engineering">
+        <section class="architectural-engineering-more">
+            <div class="container">
+                <div class="aem-info">
+                    <h2 class="aem-info-title">Архитектурное проектирование загородных домов</h2>
+                    <div class="aem-info-descroption">
+                        <p>Мы убеждены, что добиться наиболее качественного результата можно в том случае,
+                            когда весь процесс строительства от проекта до создания интерьеров осуществляется
+                            одной компанией, дающей полную гарантию на все виды работ.
+                        </p>
+                        <p>Наша компания предлагает услуги по строительству загородных домов и коттеджей
+                            в СПб «под ключ» и осуществляет не только архитектурно-строительное проектирование
+                            и общестроительные работы, но и все сопутствующие работы.
+                        </p>
+                    </div>
+                    <button type="button" class="btn btn-warning btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleAem">Заказать </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalToggleAem" tabindex="-1" aria-labelledby="exampleModalToggleLabelAem" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalToggleLabelAem">Заказать проект</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        Разрешите нам познакомиться с вами и узнать о вашем проекте. Мы подготовим для вас индивидуальное предложение.
+                                    </div>
+                                    <form class="modal-body-form">
+                                        <div class="modal-body-form-item">
+                                            <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                        </div>
+                                        <div class="modal-body-form-item">
+                                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                        </div>
+                                        <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="submit" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleAemSent" data-bs-dismiss="modal" value="Отправить сообщение">
+                                    <!--<button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleAemSent" data-bs-dismiss="modal">Отправить сообщение</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggleAemSent" tabindex="-1" aria-labelledby="exampleModalLabelAemSent" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabelAemSent">Ваше сообщение отправлено!</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        <p>Спасибо за ваше обращение.</p>
+                                        <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="architectural-engineering-photo">
+                    <img class="architectural-engineering-more-img" src="assets/img/architectural-engineering-more-img.png" alt="img">
+        </div>
+                </div>
+        </section>
+
+        <main class="ae-stages">
+            <div class="container">
+                <ul class="ae-stages-nav-list">
+                    <li class="ae-stages-nav-item">
+                        <a href="#stagesDesign" class="ae-stages-nav-link active-ae-stages">Проектирование<span></span></a>
+                    </li>
+                    <li class="ae-stages-nav-item">
+                        <a href="#stagesConstruction" class="ae-stages-nav-link">Строительство<span></span></a>
+                    </li>
+                    <li class="ae-stages-nav-item">
+                        <a href="#stagesLandscape" class="ae-stages-nav-link">Ландшафтный дизайн</a>
+                    </li>
+                </ul>
+
+                <div class="stages-design stages" id="stagesDesign">
+                    <div class="stages-title">Этап проектирования</div>
+                    <ol class="stages-design-list">
+                        <li class="stages-design-item">
+                            <h4 class="stages-design-title">Выезд на объект</h4>
+                            <div class="stages-design-desciption">
+                                <p>После заключения договора мы обязательно организуем выезд на участок нашей команды, которая
+                                    будет работать над Вашим проектом, состоящей из архитектора, инженера и ландшафтного
+                                    дизайнера. На самой первой встрече архитектор уделяет большое внимание расположению будущего
+                                    дома на участке. Так от ориентации по сторонам света сильно зависит и планировка дома
+                                    (некоторые помещения дома должны быть освещены больше, некоторые — меньше), и фасады
+                                    (площадь и расположение окон).
+                                </p>
+                                <p>При индивидуальном проектировании мы полностью привязываем Ваш дом к участку со всеми его
+                                    особенностями. Нестандартный рельеф участка обернется интересными идеями в ландшафтном
+                                    проектировании и стилистической направленности Вашего дома. Инженер тем временем следит
+                                    за техническими составляющими участка (качеством грунтов, подводами инженерных сетей и т.д.).
+                                    Вы, в свою очередь, расскажите нам о своих задумках и требованиях к будущему дому. При
+                                    проектировании дизайна интерьера загородного дома или коттеджа мы учитываем все ваши пожелания
+                                    пожелания как к внутренней отделке дома,так и к ландшафтному дизайну.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="stages-design-item">
+                            <h4 class="stages-design-title">Утверждение материалов и архитектуры</h4>
+                            <div class="stages-design-desciption">
+                                <p>Исходя из рельефа Вашего участка и других данных, полученных после выезда, архитектор проекта
+                                    сделает предварительное предложение по стилистическому решению и внешнему виду Вашего дома и
+                                    привязки пятна застройки к участку. Наша задача — создание неповторимого, эстетического облика,
+                                    гармонирующего с окружающим ландшафтом, таким образом, чтобы его внешний вид и функциональное
+                                    назначение соответствовали друг другу. После плодотворной беседы вместе с Вами мы выберем
+                                    оптимальный вариант в соответствии с Вашими желаниями и финансовыми возможностями. На этом этапе
+                                    мы утвердим дальнейший вектор нашей работы, выберем материалы, которые будем использовать и
+                                    архитектурный стиль сооружения.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="stages-design-item">
+                            <h4 class="stages-design-title">Эскиз</h4>
+                            <div class="stages-design-desciption">
+                                <p>Эскизное проектирование позволяет лучше проработать дизайн интерьера загородного дома, включая его
+                                    будущую планировку и архитектуру фасадов. В процессе эскизного проектирования мы создадим для Вас
+                                    виртуальную модель дома, где будет заложена Ваша планировка комнат, с привязкой строения к существующему
+                                    ландшафту. Вы сможете заранее увидеть внешний вид Вашего будущего дома со всех сторон и узнать точные
+                                    размеры каждой комнаты. Если внешний вид дома или размеры/расположение комнат Вам не понравятся, на
+                                    этапе эскизного проектирования можно будет корректировать планировку или геометрию дома до тех пор,
+                                    пока она Вас не устроит.
+                                </p>
+                                <p>По результатам эскизного проектирования, Вы получите точные данные по своему будущему дому: чертежи
+                                    планов этажей дома с указанием точных размеров дома и всех комнат, фасады дома с четырёх сторон в
+                                    3D графике, разрезы дома с указанием высоты этажей, кровли и прочих элементов. После согласования
+                                    Эскиза осуществляется уже точная посадка пятна застройки на площадь участка и выполняется эскизный
+                                    проект ландшафтного дизайна. Также наши специалисты подготовят Вам смету по материалам и работам,
+                                    таким образом, Вы будете знать, во сколько обойдется дом еще до начала строительства.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="stages-design-item">
+                            <h4 class="stages-design-title">Проект</h4>
+                            <div class="stages-design-desciption">
+                                <p>После того, как найдено то самое идеальное решение, отвечающее всем требованиям заказчика, мы приступаем
+                                    непосредственно к тщательной разработке проекта Вашего дома. Архитектурно-строительное проектирование
+                                    включает разработку двух разделов: Архитектурного и Конструктивного. Обычно проект включает от 60 до 120
+                                    страниц (в зависимости от площади и сложности). В нем будут находиться все необходимые для строительства
+                                    коттеджа чертежи и технические характеристики по конструкциям и узлам дома от фундамента до крыши. В проект
+                                    также будет список основных строительных материалов с расчетом их количества.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="stages-design-item">
+                            <h4 class="stages-design-title">Инженерные сети</h4>
+                            <div class="stages-design-desciption" style="border: 0;">
+                                <p>Одновременно с выполнением строительной документации идет разработка проекта инженерных сетей. В этом
+                                    разделе будет включена вся разводка по отоплению, водоснабжению, канализации и электрике. Если у Вас
+                                    есть какие-то индивидуальные пожелания, то они будут учтены при проектировании. По результатам проектирования
+                                    Вы получите альбом формата А3, объёмом примерно 40-50 листов. Также проект будет включать спецификацию
+                                    (перечень) по основным материалам и агрегатам, которые потребуется установить в доме.
+                                </p>
+                                <p>Стоимость проектирования загородного дома и сроки, безусловно, зависят от площади и сложности будущего дома.
+                                    Но большинство проектов выполняются в течение 2-3 месяцев и стоят 1200-1300 руб. за кв.м. общей площади дома.
+                                </p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="stages-construction stages hidden" id="stagesConstruction">
+                    <div class="stages-title">Этап строительства</div>
+                    <div class="stages-construction-info">
+                        <p>Мы убеждены, что добиться наиболее качественного результата можно в том случае, когда весь
+                            процесс строительства от проекта до создания интерьеров осуществляется одной компанией,
+                            дающей полную гарантию на все виды работ.
+                        </p>
+                        <p>Наша компания предлагает услуги по строительству загородных домов и коттеджей в СПб «под ключ»
+                            и осуществляет не только архитектурно-строительное проектирование и общестроительные работы,
+                            но и все сопутствующие работы, а именно:
+                        </p>
+                        <ul class="stages-construction-list">
+                            <li class="stages-construction-item">топографическую съемку;</li>
+                            <li class="stages-construction-item">инженерно-геологические изыскания;</li>
+                            <li class="stages-construction-item">получение разрешений на строительство;</li>
+                            <li class="stages-construction-item">получение технических условий на коммуникации;</li>
+                            <li class="stages-construction-item">ландшафтный дизайн;</li>
+                            <li class="stages-construction-item">проектирование интерьеров;</li>
+                        </ul>
+                        <p>При разработке проекта и его воплощении, специалисты нашей компании учитывают все пожелания
+                            заказчиков и членов их семей. Главное для нас — создание жизненного пространства, соответствующее
+                            Вашим вкусам и образу жизни.
+                        </p>
+                        <p>Вы можете не волноваться о таких деталях, как прочность и долговечность конструкции дома, ведь мы
+                            вкладываем максимум сил в реализацию проекта, всегда предварительно консультируем своих клиентов
+                            относительно того, какие из существующих материалов будут наилучшим образом справляться с поставленными задачами.
+                        </p>
+                    </div>
+                </div>
+                <div class="stages-landscape stages hidden" id="stagesLandscape">
+                    <div class="stages-title">Ландшафтный дизайн</div>
+                    <div class="stages-landscape-info">
+                        <p>Ландшафтный дизайн и благоустройство — это планировка участка, озеленение территории и создание
+                            гармоничных и красивых объектов садово-паркового искусства, а также уход за зелеными насаждениями.
+                            Проектируя ландшафтный дизайн в Петербурге, мы предусматриваем многочисленные нюансы: где и как лучше
+                            расположить здания (дом, гараж), как пройдут дорожки, где будут клумбы, как сделать газон, обеспечить
+                            его бесхлопотный полив.
+                        </p>
+                        <p>В результате Вы получите стильный и удобный для жильцов дома участок, простой в уходе. Качественно
+                            выполненный ландшафтный дизайн — это презентабельность Вашего жилья и, в то же время, место отдыха
+                            и расслабления с семьёй.
+                        </p>
+                        <p>Наша компания выполнит все работы «под ключ»: от планировки участка до озеленения территории. Ландшафтный
+                            дизайн — это понятие комплексное, включающее в себя широкий спектр работ по мощению дорожек, сооружению
+                            декоративных водоёмов, альпинариев, розариев, живой изгороди, посадки крупномеров, установлению дренажных
+                            систем, малых архитектурных форм и т.д. Спроектированный и воплощённый в жизнь ландшафтный дизайн уместен
+                            не только на прилегающих территориях загородных домов, но также и в крупных мегаполисах, например, на крышах
+                            домов или на лужайке возле ресторана.
+                        </p>
+                        <p>Профессионализм наших сотрудников, позволит Вам в кратчайшие сроки определиться со стилистикой ландшафтного
+                            дизайна, учитывая все Ваши пожелания, разработать дизайн-проект заданного участка, а также быстро и качественно
+                            воплотить его в жизнь. Индивидуально разработанный ландшафтный дизайн позволит Вам долгое время наслаждаться
+                            уникальной природной атмосферой в сочетании с инфраструктурными постройками, не прикладывая особых усилий на
+                            реставрацию и поддержание первоначального вида участка.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h4 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Этап проектирования
+                        <span></span>
+                        <span></span>
+                    </button>
+                </h4>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ol class="stages-design-list">
+                                    <li class="stages-design-item">
+                                        <h4 class="stages-design-title">Выезд на объект</h4>
+                                        <div class="stages-design-desciption">
+                                            <p>После заключения договора мы обязательно организуем выезд на участок нашей команды, которая
+                                                будет работать над Вашим проектом, состоящей из архитектора, инженера и ландшафтного
+                                                дизайнера. На самой первой встрече архитектор уделяет большое внимание расположению будущего
+                                                дома на участке. Так от ориентации по сторонам света сильно зависит и планировка дома
+                                                (некоторые помещения дома должны быть освещены больше, некоторые — меньше), и фасады
+                                                (площадь и расположение окон).
+                                            </p>
+                                            <p>При индивидуальном проектировании мы полностью привязываем Ваш дом к участку со всеми его
+                                                особенностями. Нестандартный рельеф участка обернется интересными идеями в ландшафтном
+                                                проектировании и стилистической направленности Вашего дома. Инженер тем временем следит
+                                                за техническими составляющими участка (качеством грунтов, подводами инженерных сетей и т.д.).
+                                                Вы, в свою очередь, расскажите нам о своих задумках и требованиях к будущему дому. При
+                                                проектировании дизайна интерьера загородного дома или коттеджа мы учитываем все ваши пожелания
+                                                пожелания как к внутренней отделке дома,так и к ландшафтному дизайну.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="stages-design-item">
+                                        <h4 class="stages-design-title">Утверждение материалов и архитектуры</h4>
+                                        <div class="stages-design-desciption">
+                                            <p>Исходя из рельефа Вашего участка и других данных, полученных после выезда, архитектор проекта
+                                                сделает предварительное предложение по стилистическому решению и внешнему виду Вашего дома и
+                                                привязки пятна застройки к участку. Наша задача — создание неповторимого, эстетического облика,
+                                                гармонирующего с окружающим ландшафтом, таким образом, чтобы его внешний вид и функциональное
+                                                назначение соответствовали друг другу. После плодотворной беседы вместе с Вами мы выберем
+                                                оптимальный вариант в соответствии с Вашими желаниями и финансовыми возможностями. На этом этапе
+                                                мы утвердим дальнейший вектор нашей работы, выберем материалы, которые будем использовать и
+                                                архитектурный стиль сооружения.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="stages-design-item">
+                                        <h4 class="stages-design-title">Эскиз</h4>
+                                        <div class="stages-design-desciption">
+                                            <p>Эскизное проектирование позволяет лучше проработать дизайн интерьера загородного дома, включая его
+                                                будущую планировку и архитектуру фасадов. В процессе эскизного проектирования мы создадим для Вас
+                                                виртуальную модель дома, где будет заложена Ваша планировка комнат, с привязкой строения к существующему
+                                                ландшафту. Вы сможете заранее увидеть внешний вид Вашего будущего дома со всех сторон и узнать точные
+                                                размеры каждой комнаты. Если внешний вид дома или размеры/расположение комнат Вам не понравятся, на
+                                                этапе эскизного проектирования можно будет корректировать планировку или геометрию дома до тех пор,
+                                                пока она Вас не устроит.
+                                            </p>
+                                            <p>По результатам эскизного проектирования, Вы получите точные данные по своему будущему дому: чертежи
+                                                планов этажей дома с указанием точных размеров дома и всех комнат, фасады дома с четырёх сторон в
+                                                3D графике, разрезы дома с указанием высоты этажей, кровли и прочих элементов. После согласования
+                                                Эскиза осуществляется уже точная посадка пятна застройки на площадь участка и выполняется эскизный
+                                                проект ландшафтного дизайна. Также наши специалисты подготовят Вам смету по материалам и работам,
+                                                таким образом, Вы будете знать, во сколько обойдется дом еще до начала строительства.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="stages-design-item">
+                                        <h4 class="stages-design-title">Проект</h4>
+                                        <div class="stages-design-desciption">
+                                            <p>После того, как найдено то самое идеальное решение, отвечающее всем требованиям заказчика, мы приступаем
+                                                непосредственно к тщательной разработке проекта Вашего дома. Архитектурно-строительное проектирование
+                                                включает разработку двух разделов: Архитектурного и Конструктивного. Обычно проект включает от 60 до 120
+                                                страниц (в зависимости от площади и сложности). В нем будут находиться все необходимые для строительства
+                                                коттеджа чертежи и технические характеристики по конструкциям и узлам дома от фундамента до крыши. В проект
+                                                также будет список основных строительных материалов с расчетом их количества.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="stages-design-item">
+                                        <h4 class="stages-design-title">Инженерные сети</h4>
+                                        <div class="stages-design-desciption" style="border: 0;">
+                                            <p>Одновременно с выполнением строительной документации идет разработка проекта инженерных сетей. В этом
+                                                разделе будет включена вся разводка по отоплению, водоснабжению, канализации и электрике. Если у Вас
+                                                есть какие-то индивидуальные пожелания, то они будут учтены при проектировании. По результатам проектирования
+                                                Вы получите альбом формата А3, объёмом примерно 40-50 листов. Также проект будет включать спецификацию
+                                                (перечень) по основным материалам и агрегатам, которые потребуется установить в доме.
+                                            </p>
+                                            <p>Стоимость проектирования загородного дома и сроки, безусловно, зависят от площади и сложности будущего дома.
+                                                Но большинство проектов выполняются в течение 2-3 месяцев и стоят 1200-1300 руб. за кв.м. общей площади дома.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h4 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Этап строительства
+                        <span></span>
+                        <span></span>
+                    </button>
+                </h4>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="stages-construction-info">
+                                    <p>Мы убеждены, что добиться наиболее качественного результата можно в том случае, когда весь
+                                        процесс строительства от проекта до создания интерьеров осуществляется одной компанией,
+                                        дающей полную гарантию на все виды работ.
+                                    </p>
+                                    <p>Наша компания предлагает услуги по строительству загородных домов и коттеджей в СПб «под ключ»
+                                        и осуществляет не только архитектурно-строительное проектирование и общестроительные работы,
+                                        но и все сопутствующие работы, а именно:
+                                    </p>
+                                    <ul class="stages-construction-list">
+                                        <li class="stages-construction-item">топографическую съемку;</li>
+                                        <li class="stages-construction-item">инженерно-геологические изыскания;</li>
+                                        <li class="stages-construction-item">получение разрешений на строительство;</li>
+                                        <li class="stages-construction-item">получение технических условий на коммуникации;</li>
+                                        <li class="stages-construction-item">ландшафтный дизайн;</li>
+                                        <li class="stages-construction-item">проектирование интерьеров;</li>
+                                    </ul>
+                                    <p>При разработке проекта и его воплощении, специалисты нашей компании учитывают все пожелания
+                                        заказчиков и членов их семей. Главное для нас — создание жизненного пространства, соответствующее
+                                        Вашим вкусам и образу жизни.
+                                    </p>
+                                    <p>Вы можете не волноваться о таких деталях, как прочность и долговечность конструкции дома, ведь мы
+                                        вкладываем максимум сил в реализацию проекта, всегда предварительно консультируем своих клиентов
+                                        относительно того, какие из существующих материалов будут наилучшим образом справляться с поставленными задачами.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h4 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Ландшафтный дизайн
+                        <span></span>
+                        <span></span>
+                    </button>
+                </h4>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="stages-landscape-info">
+                                    <p>Ландшафтный дизайн и благоустройство — это планировка участка, озеленение территории и создание
+                                        гармоничных и красивых объектов садово-паркового искусства, а также уход за зелеными насаждениями.
+                                        Проектируя ландшафтный дизайн в Петербурге, мы предусматриваем многочисленные нюансы: где и как лучше
+                                        расположить здания (дом, гараж), как пройдут дорожки, где будут клумбы, как сделать газон, обеспечить
+                                        его бесхлопотный полив.
+                                    </p>
+                                    <p>В результате Вы получите стильный и удобный для жильцов дома участок, простой в уходе. Качественно
+                                        выполненный ландшафтный дизайн — это презентабельность Вашего жилья и, в то же время, место отдыха
+                                        и расслабления с семьёй.
+                                    </p>
+                                    <p>Наша компания выполнит все работы «под ключ»: от планировки участка до озеленения территории. Ландшафтный
+                                        дизайн — это понятие комплексное, включающее в себя широкий спектр работ по мощению дорожек, сооружению
+                                        декоративных водоёмов, альпинариев, розариев, живой изгороди, посадки крупномеров, установлению дренажных
+                                        систем, малых архитектурных форм и т.д. Спроектированный и воплощённый в жизнь ландшафтный дизайн уместен
+                                        не только на прилегающих территориях загородных домов, но также и в крупных мегаполисах, например, на крышах
+                                        домов или на лужайке возле ресторана.
+                                    </p>
+                                    <p>Профессионализм наших сотрудников, позволит Вам в кратчайшие сроки определиться со стилистикой ландшафтного
+                                        дизайна, учитывая все Ваши пожелания, разработать дизайн-проект заданного участка, а также быстро и качественно
+                                        воплотить его в жизнь. Индивидуально разработанный ландшафтный дизайн позволит Вам долгое время наслаждаться
+                                        уникальной природной атмосферой в сочетании с инфраструктурными постройками, не прикладывая особых усилий на
+                                        реставрацию и поддержание первоначального вида участка.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+        <section class="ae-projects-of-country-houses">
+            <div class="container">
+                <h2 class="ae-pch-title">Наши проекты загородных домов</h2>
+                <div class="slider">
+                    <div class="multiple-items">
+                        <div class="slider-item">
+                            <a class="ae-pch-link" href="#">
+                        <img src="assets/img/rcSmonly-other-sp-img1.png" alt="photo">
+                        <div class="ae-pch-name">ЖК Триумф Парк</div>
+                    </a>
+                        </div>
+                        <div class="slider-item">
+                            <a class="ae-pch-link" href="#">
+                        <img src="assets/img/rcSmonly-other-sp-img2.png" alt="photo">
+                        <div class="ae-pch-name">ЖК Триумф Парк</div>
+                    </a>
+                        </div>
+                        <div class="slider-item">
+                            <a class="ae-pch-link" href="#">
+                        <img src="assets/img/rcSmonly-other-sp-img3.png" alt="photo">
+                        <div class="ae-pch-name">ЖК Триумф Парк</div>
+                    </a>
+                        </div>
+                        <div class="slider-item">
+                            <a class="ae-pch-link" href="#">
+                        <img src="assets/img/rcSmonly-other-sp-img4.png" alt="photo">
+                        <div class="ae-pch-name">ЖК Триумф Парк</div>
+                    </a>
+                        </div>
+
+                        <div class="slider-item">
+                            <a class="ae-pch-link" href="#">
+                        <img src="assets/img/rcSmonly-other-sp-img1.png" alt="photo">
+                        <div class="ae-pch-name">ЖК Триумф Парк</div>
+                    </a>
+                        </div>
+                        <div class="slider-item">
+                            <a class="ae-pch-link" href="#">
+                        <img src="assets/img/rcSmonly-other-sp-img2.png" alt="photo">
+                        <div class="ae-pch-name">ЖК Триумф Парк</div>
+                    </a>
+                        </div>
+                        <div class="slider-item">
+                            <a class="ae-pch-link" href="#">
+                        <img src="assets/img/rcSmonly-other-sp-img3.png" alt="photo">
+                        <div class="ae-pch-name">ЖК Триумф Парк</div>
+                    </a>
+                        </div>
+                        <div class="slider-item">
+                            <a class="ae-pch-link" href="#">
+                        <img src="assets/img/rcSmonly-other-sp-img4.png" alt="photo">
+                        <div class="ae-pch-name">ЖК Триумф Парк</div>
+                    </a>
+                        </div>
+                    </div>
+                    <div class="slides-numbers">
+                        <span class="active">01</span>
+                        <span class="total"></span>
+                    </div>
+                </div>
+
+                <div class="ae-pch-block-mob">
+                    <div class="ae-pch-mob-item">
+                        <a class="ae-pch-mob-link" href="#">
+                    <img class="rcSmonly-other-sp-img-mob" src="assets/img/rcSmonly-other-sp-img1.png" alt="photo">
+                    <div class="ae-pch-mob-name">ЖК Триумф Парк</div>
+                </a>
+                    </div>
+                    <div class="ae-pch-mob-item">
+                        <a class="ae-pch-mob-link" href="#">
+                    <img class="rcSmonly-other-sp-img-mob" src="assets/img/rcSmonly-other-sp-img2.png" alt="photo">
+                    <div class="ae-pch-mob-name">ЖК Триумф Парк</div>
+                </a>
+                    </div>
+                    <div class="ae-pch-mob-item">
+                        <a class="ae-pch-mob-link" href="#">
+                    <img class="rcSmonly-other-sp-img-mob" src="assets/img/rcSmonly-other-sp-img3.png" alt="photo">
+                    <div class="ae-pch-mob-name">ЖК Триумф Парк</div>
+                </a>
+                    </div>
+                    <div class="ae-pch-mob-item">
+                        <a class="ae-pch-mob-link" href="#">
+                    <img class="rcSmonly-other-sp-img-mob" src="assets/img/rcSmonly-other-sp-img4.png" alt="photo">
+                    <div class="ae-pch-mob-name">ЖК Триумф Парк</div>
+                </a>
+                    </div>
+
+                    <div class="ae-pch-mob-item">
+                        <a class="ae-pch-mob-link" href="#">
+                    <img class="rcSmonly-other-sp-img-mob" src="assets/img/rcSmonly-other-sp-img1.png" alt="photo">
+                    <div class="ae-pch-mob-name">ЖК Триумф Парк</div>
+                </a>
+                    </div>
+                    <div class="ae-pch-mob-item">
+                        <a class="ae-pch-mob-link" href="#">
+                    <img class="rcSmonly-other-sp-img-mob" src="assets/img/rcSmonly-other-sp-img2.png" alt="photo">
+                    <div class="ae-pch-mob-name">ЖК Триумф Парк</div>
+                </a>
+                    </div>
+                    <div class="ae-pch-mob-item">
+                        <a class="ae-pch-mob-link" href="#">
+                    <img class="rcSmonly-other-sp-img-mob" src="assets/img/rcSmonly-other-sp-img3.png" alt="photo">
+                    <div class="ae-pch-mob-name">ЖК Триумф Парк</div>
+                </a>
+                    </div>
+                    <div class="ae-pch-mob-item">
+                        <a class="ae-pch-mob-link" href="#">
+                    <img class="rcSmonly-other-sp-img-mob" src="assets/img/rcSmonly-other-sp-img4.png" alt="photo">
+                    <div class="ae-pch-mob-name">ЖК Триумф Парк</div>
+                </a>
+                    </div>
+                    <button type="button" class="btn btn-success btnAePchMore">Загрузить еще</button>
+                </div>
+            </div>
+        </section>
+        <section class="rmm-advice">
+            <div class="container">
+                <form class="rmm-advice-form form-block">
+                    <h2 class="rmm-advice-form-title">Нужна консультация?</h2>
+                    <div class="rmm-advice-form-item">
+                        <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                    </div>
+                    <div class="rmm-advice-form-item">
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                    </div>
+                    <input type="button" class="btn btn-warning btn-open" value="Заказать консультацию">
+                </form>
+                <div class="card-block">
+                    <h2 class="card-block-title">Вы заказали обратный звонок!</h2>
+                    <div class="card-block-description">
+                        <p>Спасибо за оставленную заявку.</p>
+                        <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по интересующим вопросам.</p>
+                    </div>
+                    <button type="button" class="btn btn-warning btn-close-card">Закрыть окно</button>
+                </div>
+                <img class="rmm-advice-img" src="assets/img/rmm-advice-img.png">
+    </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <a href="index.html"><img class="footer-logo-img" src="assets/img/footer-logo.png"></a>
+                <div class="footer-logo-info">
+                    <span>2010-2022 Студия интерьера</span>
+                    <span>Custom Made, все права защищены</span>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleFooter">
+                Заказать звонок
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalToggleFooter" tabindex="-1" aria-labelledby="exampleModalToggleFooter" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalToggleFooter">Заказать звонок</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="modal-body-form">
+                                <div class="modal-body-form-item">
+                                    <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                </div>
+                                <div class="modal-body-form-item">
+                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                </div>
+                                <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalLabelFooterSent" data-bs-dismiss="modal" value="Отправить сообщение">
+                            <!--<button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalLabelFooterSent" data-bs-dismiss="modal">Отправить сообщение</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalLabelFooterSent" tabindex="-1" aria-labelledby="exampleModalLabelFooterSent" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLabelFooterSent">Вы заказали обратный звонок!</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-body-description">
+                                <p>Спасибо за ваше обращение.</p>
+                                <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <a class="footer-link" href="index.html">О нас</a>
+                    <a class="footer-link" href="portfolio.html">Портфолио</a>
+                    <a class="footer-link" href="#">Цены</a>
+                    <a class="footer-link" href="services.html">Услуги</a>
+                    <a class="footer-link" href="blog.html">Блог</a>
+                </div>
+                <div class="footer-links-column-two">
+                    <a class="footer-link" href="interior-design.html">Дизайн интерьера</a>
+                    <a class="footer-link" href="finishing-works.html">Отделочные работы</a>
+                    <a class="footer-link" href="authors-supervision.htm">Авторский надзор</a>
+                    <a class="footer-link" href="decorating.html">Декорирование</a>
+                    <a class="footer-link" href="reconnection-matching.html">Согласование перепланировки</a>
+                    <a class="footer-link" href="architectural-engineering.html">Архитектурное проектирование</a>
+                    <a class="footer-link" href="designer-furnitur.html">Авторская мебель</a>
+                </div>
+            </div>
+            <div class="footer-social-media">
+                <div class="footer-social-media-column">
+                    <div class="footer-social-media-item icon-email">cmade.spb@mail.ru</div>
+                    <div class="footer-social-media-item icon-inst">peterson.designer</div>
+                    <div class="footer-social-media-item icon-vk">peterson_designer</div>
+                </div>
+                <div class="footer-social-media-column">
+                    <div class="footer-social-media-item icon-telegram">@peterson.designer</div>
+                    <div class="footer-social-media-item icon-house">peterson.designer</div>
+                    <div class="footer-social-media-item icon-pinter">peterson.designer</div>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <div class="footer-contacts-item icon-local">
+                    <div class="city">Санкт-Петербург</div>
+                    <div class="city">ул. Уральская, 13</div>
+                </div>
+                <div class="footer-contacts-item icon-phone">
+                    <div class="phone">+7(905) 204-77-74</div>
+                    <div class="phone">+7(812) 715-02-75</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="assets/js/popper.min.js"></script>
+    <script defer src="assets/js/bootstrap.min.js"></script>
+    <script defer src="assets/js/slick.min.js"></script>
+    <script async src="assets/js/jquery.fancybox.min.js"></script>
+    <script defer src="assets/js/jquery.nice-select.min.js"></script>
+    <script defer src="assets/js/jquery-match-height.js"></script>
+    <script async src="assets/js/global.js"></script>
+
+</body>
+
+</html>

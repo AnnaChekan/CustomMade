@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#188de7">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>Главная</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="assets/js/jQuery3.6.1.js"></script>
+</head>
+
+<body>
+
+    <div class='thetop'></div>
+    <div class='scrolltop'>
+        <div class='muve-top'></div>
+    </div>
+    <header>
+        <a href="markup.html" class="markup-link">markup</a>
+        <nav class="container navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+        <!--<img src="assets/img/logo.png" alt="logo">-->
+        <picture>
+          <source media="(min-width:992px)" srcset="assets/img/logo.png">
+          <!--<source media="(min-width:768px)" srcset="assets/img/logo-tablet.png">-->
+          <img src="assets/img/logo-mob.png" alt="logo">
+        </picture>
+      </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="about-studio.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Цены</a>
+                        </li>
+                    </ul>
+                    <div class="town">Санкт-Петербург ул. Уральская, 13</div>
+                    <button type="button" class="btn btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeader">
+                        Заказать проект
+                    </button>
+                    <div class="modal fade" id="exampleModalToggleHeader" tabindex="-1" aria-labelledby="exampleModalToggleLabelHeader" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalToggleLabelHeader">Заказать проект</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        Разрешите нам познакомиться с вами и узнать о вашем проекте. Мы подготовим для вас индивидуальное предложение.
+                                    </div>
+                                    <form class="modal-body-form">
+                                        <div class="modal-body-form-item">
+                                            <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                        </div>
+                                        <div class="modal-body-form-item">
+                                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                        </div>
+                                        <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeaderSent" data-bs-dismiss="modal" value="Отправить сообщение">
+                                    <!--<button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeaderSent" data-bs-dismiss="modal">Отправить сообщение</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggleHeaderSent" tabindex="-1" aria-labelledby="exampleModalLabelHeaderSent" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabelHeaderSent">Ваше сообщение отправлено!</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        <p>Спасибо за ваше обращение.</p>
+                                        <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="menu-toggler btn-menu" id="burgerMenu">
+                        <div class="burger-name">МЕНЮ</div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="nav-menu">
+                        <ul class="nav-menu-list" id="navMenu">
+                            <li class="nav-menu-item">
+                                <a href="about-studio.html" class="nav-menu-link">О нас</a>
+                            </li>
+                            <li class="nav-menu-item">
+                                <a href="services.html" class="nav-menu-link active-menu">Услуги
+                  <ul class="more-list">
+                    <li class="more-item">
+                      <a href="interior-design.html" class="more-link">Дизайн интерьера</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="finishing-works.html" class="more-link active-more">Отделочные работы</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="authors-supervision.html" class="more-link">Авторский надзор</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="decorating.html" class="more-link">Декорирование</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="reconnection-matching.html" class="more-link">Согласование перепланировки</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="architectural-engineering.html" class="more-link">Архитектурное проектирование</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="designer-furnitur.html" class="more-link">Авторская мебель</a>
+                            </li>
+                        </ul>
+                </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">Стоимость</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="portfolio.html" class="nav-menu-link">Портфолио</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="blog.html" class="nav-menu-link">Блог</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="contacts.html" class="nav-menu-link">Контакты</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main class="wrapper blog">
+        <section class="blog-info">
+            <div class="container">
+                <div class="blog">
+                    <h2 class="blog-title">Блог</h2>
+                    <div class="slider">
+                        <div class="single-item">
+                            <div class="slider-item">
+                                <div class="blog-more">
+                                    <h4 class="blog-more-title">Стиль контемпорари в дизайне интерьера</h4>
+                                    <div class="blog-more-other">
+                                        <p class="blog-more-other-data">4 апреля 2018 г.</p>
+                                        <p class="blog-more-other-view"><span>5704</span></p>
+                                    </div>
+                                    <img class="blog-more-img" src="assets/img/blog-info-img-1.png" alt="">
+                                    <div class="blog-more-description">
+                                        <p class="showe-more-text-item">Своеобразный девиз интерьера в модном ныне стиле контемпорари — максимум минимума.
+                                            Это стиль где приветствуется свобода выбора, где нет практически никаких условностей
+                                            и ограничений. Интерьер идеально подходит для современной молодежи, не любящей обилие
+                                            мебели, стремящейся к предельной функциональности каждого предмета и простору в комнате.
+                                            Внешне контемп ближе всего к минимализму и классическому дизайну, основные принципы
+                                            базируются на трех «китах»: простота, функциональность и максимальное удобство.
+                                        </p>
+                                        <span class="more" id="moreOne">
+                                    <p class="showe-more-text-item">Своеобразный девиз интерьера в модном ныне стиле контемпорари — максимум минимума. 
+                                    Это стиль где приветствуется свобода выбора, где нет практически никаких условностей 
+                                    и ограничений. Интерьер идеально подходит для современной молодежи, не любящей обилие 
+                                    мебели, стремящейся к предельной функциональности каждого предмета и простору в комнате. 
+                                    Внешне контемп ближе всего к минимализму и классическому дизайну, основные принципы 
+                                    базируются на трех «китах»: простота, функциональность и максимальное удобство.
+                                    </p>
+                                </span>
+                                        <button onclick="readMoreOne()" type="button" class="blog-more-link" id="btnBlogReadOne">Читать полностью</button>
+                                    </div>
+                                </div>
+
+                                <div class="blog-more">
+                                    <h4 class="blog-more-title">Скандинавский стиль в интерьере</h4>
+                                    <div class="blog-more-other">
+                                        <p class="blog-more-other-data">8 марта 2018 г.</p>
+                                        <p class="blog-more-other-view"><span>3620</span></p>
+                                    </div>
+                                    <img class="blog-more-img" src="assets/img/blog-info-img-2.png" alt="">
+                                    <div class="blog-more-description">
+                                        <p class="showe-more-text-item">Скандинавский дизайн интерьера возник в середине прошлого века в послевоенный период, когда
+                                            разрушенным европейским городам требовалось много функциональной мебели. Национальной особенностью
+                                            стран Скандинавии было обилие дерева и мастеров, умеющих с ним обращаться. Первыми в этом
+                                            направлении преуспели датчане, использовавшие преимущественно тиковое дерево. Позже они стали
+                                            активно применять фанеру и пластиковый материал. Затем идею подхватили шведы, выпускавшие по
+                                            большей части кухни, а потом уже всю остальную мебель. А с 70 годов началось массовое распространение
+                                            мебели из сосны под торговой маркой «Икея».
+                                        </p>
+                                        <span class="more" id="moreTwo">
+                                    <p>Скандинавский дизайн интерьера возник в середине прошлого века в послевоенный период, когда 
+                                    разрушенным европейским городам требовалось много функциональной мебели. Национальной особенностью 
+                                    стран Скандинавии было обилие дерева и мастеров, умеющих с ним обращаться. Первыми в этом 
+                                    направлении преуспели датчане, использовавшие преимущественно тиковое дерево. Позже они стали 
+                                    активно применять фанеру и пластиковый материал. Затем идею подхватили шведы, выпускавшие по 
+                                    большей части кухни, а потом уже всю остальную мебель. А с 70 годов началось массовое распространение 
+                                    мебели из сосны под торговой маркой «Икея».
+                                    </p>
+                                </span>
+                                        <button onclick="readMoreTwo()" type="button" class="blog-more-link" id="btnBlogReadTwo">Читать полностью</button>
+                                    </div>
+                                </div>
+
+                                <div class="blog-more">
+                                    <h4 class="blog-more-title">Средиземноморский стиль в дизайне интерьера</h4>
+                                    <div class="blog-more-other">
+                                        <p class="blog-more-other-data">21 февраля 2018 г.</p>
+                                        <p class="blog-more-other-view"><span>3620</span></p>
+                                    </div>
+                                    <img class="blog-more-img" src="assets/img/blog-info-img-3.png" alt="">
+                                    <div class="blog-more-description">
+                                        <p class="showe-more-text-item">Продуманность и практичность наряду с лёгкостью, свежестью и естественными тонами — всё это отличительные
+                                            признаки дизайна в средиземноморском стиле. Здесь отсутствует роскошь, экстравагантность, вычурный декор,
+                                            витиеватая мебель.
+                                            Основа этого направления зародилась ещё в начале ХХ века в Тоскане, находившейся в Италии, и в последствии
+                                            перенята странами Средиземноморья: Испанией, Грецией, Францией, Тунисом, Египтом, Алжиром, Марокко и др.
+                                            В то время территории этих стран были практически полностью заселены небогатыми земледельцами, а большинство
+                                            архитектурных построек представляло переплетение античной культуры и простого крестьянского быта.
+                                        </p>
+                                        <span class="more" id="moreThree">
+                                    <p class="showe-more-text-item">Продуманность и практичность наряду с лёгкостью, свежестью и естественными тонами — всё это отличительные 
+                                        признаки дизайна в средиземноморском стиле. Здесь отсутствует роскошь, экстравагантность, вычурный декор, 
+                                        витиеватая мебель.
+                                        Основа этого направления зародилась ещё в начале ХХ века в Тоскане, находившейся в Италии, и в последствии 
+                                        перенята странами Средиземноморья: Испанией, Грецией, Францией, Тунисом, Египтом, Алжиром, Марокко и др. 
+                                        В то время территории этих стран были практически полностью заселены небогатыми земледельцами, а большинство 
+                                        архитектурных построек представляло переплетение античной культуры и простого крестьянского быта.
+                                    </p>
+                                </span>
+                                        <button onclick="readMoreThree()" type="button" class="blog-more-link" id="btnBlogReadThree">Читать полностью</button>
+                                    </div>
+                                </div>
+
+                                <div class="blog-more">
+                                    <h4 class="blog-more-title">Стиль бохо в дизайне интерьера</h4>
+                                    <div class="blog-more-other">
+                                        <p class="blog-more-other-data">21 февраля 2018 г.</p>
+                                        <p class="blog-more-other-view"><span>3620</span></p>
+                                    </div>
+                                    <img class="blog-more-img" src="assets/img/blog-info-img-4.png" alt="">
+                                    <div class="blog-more-description">
+                                        <p class="showe-more-text-item">Термин «бохо» получил широкое распространение в 2000 годах, применительно к яркой одежде с этническими
+                                            элементами и множеством массивных аксессуаров. Это название имеет французское происхождение «bohémiens»
+                                            и означает «цыганщина», так как данное направление зародилось в Богемии, где когда-то проживали цыгане.
+                                            «Бохо» в дизайне интерьера характеризуется буйством красок, сочетанием неподходящих друг другу вещей,
+                                            цветов и деталей убранства. Чтобы оформить помещение в таком виде, нужен креативный подход, определённая
+                                            доля смелости и утончённый вкус.
+                                        </p>
+                                        <span class="more" id="moreFour">
+                                    <p class="showe-more-text-item">Тем не менее каждый желающий может «богемно» украсить свою квартиру, имея чувство цвета и зная ключевые 
+                                        особенности дизайна, а именно: 
+                                    </p>
+                                    <p class="showe-more-text-item">Выбор идеи, которая будет задавать главное направление в построении интерьера. За основу можно взять восточные, 
+                                        европейские или современные мотивы, демонстрируя тем самым гармоничное сочетание, а не беспорядочное нагромождение 
+                                        разношёрстных вещей. 
+                                        Многообразие ткани, обилие света, комнатных растений и различных декоративных предметов, изысканно расставленных 
+                                        на полу, открытых полках, этажерках. 
+                                        Преобладание в интерьере яркой и насыщенной цветовой палитры, которая должна соответствовать стилю и связывать в 
+                                        одно целое все детали и акценты.
+                                    </p>
+                                    <p class="showe-more-text-item">ДЛЯ КОГО ПОДОЙДЁТ И В КАКОМ ПОМЕЩЕНИИ ЛУЧШЕ ИСПОЛЬЗОВАТЬ?</p>
+                                    <p class="showe-more-text-item">Стиль «бохо» чаще всего можно встретить в домах творческих незаурядных людей: артистов, модельеров, писателей, 
+                                        художников, имеющих собственное мнение и видение мира, которые ценят индивидуальность и не подчиняются общественным 
+                                        устоям. Они тяготеют ко всему яркому и красочному и чувствуют себя комфортно среди многообразия различных «штуковин». 
+                                        Это любители хендмейда, эклектики, винтажных вещей с элементами этно. 
+                                    </p>
+                                    <p class="showe-more-text-item">Напротив, минималисты и педантичные люди, стремящиеся к простоте и упорядоченности во всём, в том числе и собственном жилище, 
+                                        будут чувствовать себя неуютно в пёстром, насыщенном красками помещении с большим количеством предметов. 
+                                    </p>
+                                    <p class="showe-more-text-item">Тем не менее, как бы парадоксально это не звучало, такой интерьер не подойдёт людям, которые не приемлют аккуратность. 
+                                        Ведь за кажущийся, с первого взгляда, захламлённостью, прослеживается неповторимая гармония и порядок. 
+                                    </p>
+                                    <p class="showe-more-text-item">«Бохо» можно использовать практически в любом помещении. Но наиболее точно характер и внутренний мир хозяина дома 
+                                        прослеживается в спальне и кухне. Интерьер спальни в стиле бохо должен создавать расслабленную атмосферу вальяжности. 
+                                    </p>
+                                    <p class="showe-more-text-item">Если у вас отсутствует кровать, то это как раз то, что нужно. Матрас на полу вполне вписывается в концепцию стиля. 
+                                        Любите спать на кровати? Тогда выбирайте деревянный или кованый вариант. 
+                                    </p>                    
+                                    <p class="showe-more-text-item">Объёмные разноцветные пледы и покрывала складками спущенные на пол демонстрируют некоторую небрежность и 
+                                        домашний уют. Для спальни подойдут лёгкие прозрачные занавески, кашпо и макраме. Отлично будут смотреться принты 
+                                        с незатейливыми рисунками и узорами. А марокканские половички внесут в спальню восточный колорит. 
+                                    </p>                    
+                                    <p>Выбор декора здесь безграничен: свечи, ловцы снов, бусы, гирлянды и живые цветы – всё это гармонично впишется в 
+                                        спальню. Стиль бохо в интерьере кухни ассоциируется с оригинальностью и неповторимым уютом, что притягивает к 
+                                        себе хозяев, даже когда они не голодны. 
+                                    </p>
+                                    <p class="showe-more-text-item">Богемскую кухню отличают следующие характерные черты:</p>
+                                    <p class="showe-more-text-item">деревянный или каменный пол с обилием ковриков; </p>
+                                    <p class="showe-more-text-item">побеленные или окрашенные стены (обои, как правило, отсутствуют); </p>
+                                    <p class="showe-more-text-item">натуральная мебель, с обязательным присутствием дивана и многочисленных пуфов; </p>
+                                    <p class="showe-more-text-item">отсутствие современной кухонной техники (комбайнов, телевизоров, электрических чайников); </p>
+                                    <p class="showe-more-text-item">множество полочек с различной утварью вроде баночек со специями, вазочек и мисочек, небольших деревянных фигурок 
+                                        и статуэток. 
+                                    </p>
+                                    <p class="showe-more-text-item">ЭЛЕМЕНТЫ СТИЛЯ <br>
+                                    «Бохо» открывает огромные просторы для воплощения творческой фантазии и свободы самовыражения.
+                                    <p class="showe-more-text-item">Цветовые решения <br> 
+                                        Этот стиль не предполагает каких-либо ограничений в выборе цветовых композиций. Главное, чтобы в этом помещении 
+                                        было приятно находиться, и не уставали глаза. Чаще всего используют оттенки: 
+                                    </p>
+                                    <p class="showe-more-text-item">красного;<br> 
+                                        жёлтого; <br> 
+                                        оранжевого; <br> 
+                                        зелёного; <br> 
+                                        синего. <br> 
+                                        Мебель <br> 
+                                        Непременный атрибут стиля – мягкая мебель: диваны, кресла, пуфы, кровати. И вовсе не обязательно, чтобы они 
+                                        были с одного гарнитура. Их количество подбирается индивидуально, в зависимости от дизайнерской задумки. 
+                                    </p>
+                                    <p class="showe-more-text-item">Преимуществом богемского стиля является, то, что даже самая непримечательная мебель может преобразиться и 
+                                        заиграть радужными красками, если декорировать её цветными покрывалами, пледами и подушками разных форм и размеров.
+                                    </p>
+                                    <p class="showe-more-text-item">Пол, потолок и стены </p>
+                                    <p>Характерной особенностью стиля «бохо» в отделке пола, потолка и стен является применение натуральных материалов. 
+                                        Линолеум, пластиковые окна и жалюзи здесь неуместны. 
+                                    </p>
+                                    <p class="showe-more-text-item">Для пола желательно использовать паркет, камень, керамику или в исключительных случаях ламинат, имитирующий 
+                                        древесину. Для потолка подойдёт обыкновенная побелка, лепнина или матовая натяжная ткань. 
+                                    </p>                   
+                                    <p class="showe-more-text-item">Стены – неотъемлемая часть декора. Их можно окрасить в однотонный яркий цвет и сделать трафаретную роспись. 
+                                        Ковры и панно создадут уютную атмосферу. Для этого стиля подойдут и обои с необычным орнаментом.
+                                    </p>
+                                    <p class="showe-more-text-item">Освещение <br> 
+                                        Идеально если помещение оборудовано широкими окнами, пропускающими естественный солнечный свет. 
+                                        Что касается электрического освещения, то предпочтение нужно отдать мягкому, тёплому варианту. 
+                                        Этого можно добиться при помощи абажуров или светильников. 
+                                    </p>
+                                    <p class="showe-more-text-item">Текстиль <br> 
+                                        При оформлении «бохо» интерьера наиболее существенная роль отводится текстилю. Шторы, пледы, ковры, 
+                                        скатерти и салфетка – обязательные предметы декора. Цветовая палитра зависит только от вкуса хозяина 
+                                        дома, а вот по качеству лучше отдавать предпочтения тяжёлым тканям. 
+                                    </p>
+                                    <p class="showe-more-text-item">Различные детали декора <br> 
+                                        В выборе количества интерьерных аксессуаров ограничений нет. Это могут быть: </p>                        
+                                    <p class="showe-more-text-item">картины; <br>
+                                        сувениры; <br>
+                                        книги; <br>
+                                        фоторамки; <br>
+                                        статуэтки; <br>
+                                        светильники; <br> 
+                                        панно; <br>
+                                        поделки ручной работы; <br>
+                                        антикварные предметы. <br>
+                                        Декоративные элементы необходимо расположить так, чтобы они всегда находились на виду. 
+                                    </p>
+                                    <p class="showe-more-text-item">ИДЕИ ДЛЯ ДИЗАЙНА ИНТЕРЬЕРА <br>
+                                        Со временем, у этого стиля образовался ряд разветвлений, которые имеют свои характерные особенности. 
+                                        Рассмотрим самые популярные направления: 
+                                    </p>                        
+                                    <p class="showe-more-text-item">Классическое. «Бохо-классик» отличают строгая мебель и тяжёлые текстильные ткани (гобелен, атлас, бархат). 
+                                        В цветовой палитре преобладают коричневые, бежевые оттенки и золото. Разбавить излишнюю чопорность помогут 
+                                        небольшие детали этно-стиля. 
+                                        Роскошное. Стиль «бохо-шик» в интерьере считается наиболее распространённым. Здесь используются радужные 
+                                        оттенки, поднимающие настроение. 
+                                        Экологическое. Эко-интерьер не приемлет искусственных вещей. Всё должно быть натуральное, даже незначительные 
+                                        детали. Деревянная мебель, каменный пол, керамика, кожа, рогожка, лён, шёлк дарят ощущение практичности и 
+                                        изысканности. 
+                                        Гламурное. Характеризуется сочетанием огромного количества гламурных и винтажных вещичек. Эта разновидность 
+                                        «бохо» является настоящей проверкой для хозяина дома на предмет наличия у него утончённого вкуса и изысканности. 
+                                        Бохо-хиппи. Это направление является предшественником современного «бохо». Он характеризуется яркими 
+                                        орнаментами, множеством декоративных элементов. Кальяны, аромолампы и музыкальные инструменты создают 
+                                        свободолюбивую, немного легкомысленную атмосферу. 
+                                    </p>                         
+                                </span>
+                                        <button onclick="readMoreFour()" type="button" class="blog-more-link" id="btnBlogReadFour">Читать полностью</button>
+                                    </div>
+                                </div>
+                                <div class="blog-share">
+                                    <p class="blog-share-name">Поделиться:</p>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon1.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon2.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon3.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon4.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon5.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon6.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon7.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon8.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon9.png" alt=""></a>
+                                </div>
+                                <div class="blog-teg-other">
+                                    <p class="blog-teg-other-name">Теги:</p>
+                                    <p class="blog-teg-other-meaning">Дизайн интерьера<span>48</span></p>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div class="blog-more">
+                                    <h4 class="blog-more-title">Стиль контемпорари в дизайне интерьера</h4>
+                                    <div class="blog-more-other">
+                                        <p class="blog-more-other-data">4 апреля 2018 г.</p>
+                                        <p class="blog-more-other-view"><span>5704</span></p>
+                                    </div>
+                                    <img class="blog-more-img" src="assets/img/blog-info-img-1.png" alt="">
+                                    <div class="blog-more-description">
+                                        <p class="showe-more-text-item">Своеобразный девиз интерьера в модном ныне стиле контемпорари — максимум минимума.
+                                            Это стиль где приветствуется свобода выбора, где нет практически никаких условностей
+                                            и ограничений. Интерьер идеально подходит для современной молодежи, не любящей обилие
+                                            мебели, стремящейся к предельной функциональности каждого предмета и простору в комнате.
+                                            Внешне контемп ближе всего к минимализму и классическому дизайну, основные принципы
+                                            базируются на трех «китах»: простота, функциональность и максимальное удобство.
+                                        </p>
+                                        <span class="more" id="moreFive">
+                                    <p>Своеобразный девиз интерьера в модном ныне стиле контемпорари — максимум минимума. 
+                                        Это стиль где приветствуется свобода выбора, где нет практически никаких условностей 
+                                        и ограничений. Интерьер идеально подходит для современной молодежи, не любящей обилие 
+                                        мебели, стремящейся к предельной функциональности каждого предмета и простору в комнате. 
+                                        Внешне контемп ближе всего к минимализму и классическому дизайну, основные принципы 
+                                        базируются на трех «китах»: простота, функциональность и максимальное удобство.
+                                    </p>
+                                </span>
+                                        <button onclick="readMoreFive()" type="button" class="blog-more-link" id="btnBlogReadFive">Читать полностью</button>
+                                    </div>
+                                </div>
+
+                                <div class="blog-more">
+                                    <h4 class="blog-more-title">Скандинавский стиль в интерьере</h4>
+                                    <div class="blog-more-other">
+                                        <p class="blog-more-other-data">8 марта 2018 г.</p>
+                                        <p class="blog-more-other-view"><span>3620</span></p>
+                                    </div>
+                                    <img class="blog-more-img" src="assets/img/blog-info-img-2.png" alt="">
+                                    <div class="blog-more-description">
+                                        <p class="showe-more-text-item">Скандинавский дизайн интерьера возник в середине прошлого века в послевоенный период, когда
+                                            разрушенным европейским городам требовалось много функциональной мебели. Национальной особенностью
+                                            стран Скандинавии было обилие дерева и мастеров, умеющих с ним обращаться. Первыми в этом
+                                            направлении преуспели датчане, использовавшие преимущественно тиковое дерево. Позже они стали
+                                            активно применять фанеру и пластиковый материал. Затем идею подхватили шведы, выпускавшие по
+                                            большей части кухни, а потом уже всю остальную мебель. А с 70 годов началось массовое распространение
+                                            мебели из сосны под торговой маркой «Икея».
+                                        </p>
+                                        <span class="more" id="moreSix">
+                                    <p>Скандинавский дизайн интерьера возник в середине прошлого века в послевоенный период, когда 
+                                        разрушенным европейским городам требовалось много функциональной мебели. Национальной особенностью 
+                                        стран Скандинавии было обилие дерева и мастеров, умеющих с ним обращаться. Первыми в этом 
+                                        направлении преуспели датчане, использовавшие преимущественно тиковое дерево. Позже они стали 
+                                        активно применять фанеру и пластиковый материал. Затем идею подхватили шведы, выпускавшие по 
+                                        большей части кухни, а потом уже всю остальную мебель. А с 70 годов началось массовое распространение 
+                                        мебели из сосны под торговой маркой «Икея».
+                                    </p>
+                                </span>
+                                        <button onclick="readMoreSix()" type="button" class="blog-more-link" id="btnBlogReadSix">Читать полностью</button>
+                                    </div>
+                                </div>
+
+                                <div class="blog-more">
+                                    <h4 class="blog-more-title">Средиземноморский стиль в дизайне интерьера</h4>
+                                    <div class="blog-more-other">
+                                        <p class="blog-more-other-data">21 февраля 2018 г.</p>
+                                        <p class="blog-more-other-view"><span>3620</span></p>
+                                    </div>
+                                    <img class="blog-more-img" src="assets/img/blog-info-img-3.png" alt="">
+                                    <div class="blog-more-description">
+                                        <p class="showe-more-text-item">Продуманность и практичность наряду с лёгкостью, свежестью и естественными тонами — всё это отличительные
+                                            признаки дизайна в средиземноморском стиле. Здесь отсутствует роскошь, экстравагантность, вычурный декор,
+                                            витиеватая мебель.
+                                            Основа этого направления зародилась ещё в начале ХХ века в Тоскане, находившейся в Италии, и в последствии
+                                            перенята странами Средиземноморья: Испанией, Грецией, Францией, Тунисом, Египтом, Алжиром, Марокко и др.
+                                            В то время территории этих стран были практически полностью заселены небогатыми земледельцами, а большинство
+                                            архитектурных построек представляло переплетение античной культуры и простого крестьянского быта.
+                                        </p>
+                                        <span class="more" id="moreSeven">
+                                    <p class="showe-more-text-item">Продуманность и практичность наряду с лёгкостью, свежестью и естественными тонами — всё это отличительные 
+                                        признаки дизайна в средиземноморском стиле. Здесь отсутствует роскошь, экстравагантность, вычурный декор, 
+                                        витиеватая мебель.
+                                        Основа этого направления зародилась ещё в начале ХХ века в Тоскане, находившейся в Италии, и в последствии 
+                                        перенята странами Средиземноморья: Испанией, Грецией, Францией, Тунисом, Египтом, Алжиром, Марокко и др. 
+                                        В то время территории этих стран были практически полностью заселены небогатыми земледельцами, а большинство 
+                                        архитектурных построек представляло переплетение античной культуры и простого крестьянского быта.
+                                    </p>
+                                </span>
+                                        <button onclick="readMoreSeven()" type="button" class="blog-more-link" id="btnBlogReadSeven">Читать полностью</button>
+                                    </div>
+                                </div>
+
+                                <div class="blog-more">
+                                    <h4 class="blog-more-title">Стиль бохо в дизайне интерьера</h4>
+                                    <div class="blog-more-other">
+                                        <p class="blog-more-other-data">21 февраля 2018 г.</p>
+                                        <p class="blog-more-other-view"><span>3620</span></p>
+                                    </div>
+                                    <img class="blog-more-img" src="assets/img/blog-info-img-4.png" alt="">
+                                    <div class="blog-more-description">
+                                        <p class="showe-more-text-item">Термин «бохо» получил широкое распространение в 2000 годах, применительно к яркой одежде с этническими
+                                            элементами и множеством массивных аксессуаров. Это название имеет французское происхождение «bohémiens»
+                                            и означает «цыганщина», так как данное направление зародилось в Богемии, где когда-то проживали цыгане.
+                                            «Бохо» в дизайне интерьера характеризуется буйством красок, сочетанием неподходящих друг другу вещей,
+                                            цветов и деталей убранства. Чтобы оформить помещение в таком виде, нужен креативный подход, определённая
+                                            доля смелости и утончённый вкус.
+                                        </p>
+                                        <span class="more" id="moreEight">
+                                    <p class="showe-more-text-item">Тем не менее каждый желающий может «богемно» украсить свою квартиру, имея чувство цвета и зная ключевые 
+                                        особенности дизайна, а именно: 
+                                    </p>
+                                    <p class="showe-more-text-item">Выбор идеи, которая будет задавать главное направление в построении интерьера. За основу можно взять восточные, 
+                                        европейские или современные мотивы, демонстрируя тем самым гармоничное сочетание, а не беспорядочное нагромождение 
+                                        разношёрстных вещей. 
+                                        Многообразие ткани, обилие света, комнатных растений и различных декоративных предметов, изысканно расставленных 
+                                        на полу, открытых полках, этажерках. 
+                                        Преобладание в интерьере яркой и насыщенной цветовой палитры, которая должна соответствовать стилю и связывать в 
+                                        одно целое все детали и акценты.
+                                    </p>
+                                    <p class="showe-more-text-item">ДЛЯ КОГО ПОДОЙДЁТ И В КАКОМ ПОМЕЩЕНИИ ЛУЧШЕ ИСПОЛЬЗОВАТЬ?</p>
+                                    <p class="showe-more-text-item">Стиль «бохо» чаще всего можно встретить в домах творческих незаурядных людей: артистов, модельеров, писателей, 
+                                        художников, имеющих собственное мнение и видение мира, которые ценят индивидуальность и не подчиняются общественным 
+                                        устоям. Они тяготеют ко всему яркому и красочному и чувствуют себя комфортно среди многообразия различных «штуковин». 
+                                        Это любители хендмейда, эклектики, винтажных вещей с элементами этно. 
+                                    </p>
+                                    <p class="showe-more-text-item">Напротив, минималисты и педантичные люди, стремящиеся к простоте и упорядоченности во всём, в том числе и собственном жилище, 
+                                        будут чувствовать себя неуютно в пёстром, насыщенном красками помещении с большим количеством предметов. 
+                                    </p>
+                                    <p class="showe-more-text-item">Тем не менее, как бы парадоксально это не звучало, такой интерьер не подойдёт людям, которые не приемлют аккуратность. 
+                                        Ведь за кажущийся, с первого взгляда, захламлённостью, прослеживается неповторимая гармония и порядок. 
+                                    </p>
+                                    <p class="showe-more-text-item">«Бохо» можно использовать практически в любом помещении. Но наиболее точно характер и внутренний мир хозяина дома 
+                                        прослеживается в спальне и кухне. Интерьер спальни в стиле бохо должен создавать расслабленную атмосферу вальяжности. 
+                                    </p>
+                                    <p class="showe-more-text-item">Если у вас отсутствует кровать, то это как раз то, что нужно. Матрас на полу вполне вписывается в концепцию стиля. 
+                                        Любите спать на кровати? Тогда выбирайте деревянный или кованый вариант. 
+                                    </p>                    
+                                    <p class="showe-more-text-item">Объёмные разноцветные пледы и покрывала складками спущенные на пол демонстрируют некоторую небрежность и 
+                                        домашний уют. Для спальни подойдут лёгкие прозрачные занавески, кашпо и макраме. Отлично будут смотреться принты 
+                                        с незатейливыми рисунками и узорами. А марокканские половички внесут в спальню восточный колорит. 
+                                    </p>                    
+                                    <p>Выбор декора здесь безграничен: свечи, ловцы снов, бусы, гирлянды и живые цветы – всё это гармонично впишется в 
+                                        спальню. Стиль бохо в интерьере кухни ассоциируется с оригинальностью и неповторимым уютом, что притягивает к 
+                                        себе хозяев, даже когда они не голодны. 
+                                    </p>
+                                    <p class="showe-more-text-item">Богемскую кухню отличают следующие характерные черты:</p>
+                                    <p class="showe-more-text-item">деревянный или каменный пол с обилием ковриков; </p>
+                                    <p class="showe-more-text-item">побеленные или окрашенные стены (обои, как правило, отсутствуют); </p>
+                                    <p class="showe-more-text-item">натуральная мебель, с обязательным присутствием дивана и многочисленных пуфов; </p>
+                                    <p class="showe-more-text-item">отсутствие современной кухонной техники (комбайнов, телевизоров, электрических чайников); </p>
+                                    <p class="showe-more-text-item">множество полочек с различной утварью вроде баночек со специями, вазочек и мисочек, небольших деревянных фигурок 
+                                        и статуэток. 
+                                    </p>
+                                    <p class="showe-more-text-item">ЭЛЕМЕНТЫ СТИЛЯ <br>
+                                    «Бохо» открывает огромные просторы для воплощения творческой фантазии и свободы самовыражения.
+                                    <p class="showe-more-text-item">Цветовые решения <br> 
+                                        Этот стиль не предполагает каких-либо ограничений в выборе цветовых композиций. Главное, чтобы в этом помещении 
+                                        было приятно находиться, и не уставали глаза. Чаще всего используют оттенки: 
+                                    </p>
+                                    <p class="showe-more-text-item">красного;<br> 
+                                        жёлтого; <br> 
+                                        оранжевого; <br> 
+                                        зелёного; <br> 
+                                        синего. <br> 
+                                        Мебель <br> 
+                                        Непременный атрибут стиля – мягкая мебель: диваны, кресла, пуфы, кровати. И вовсе не обязательно, чтобы они 
+                                        были с одного гарнитура. Их количество подбирается индивидуально, в зависимости от дизайнерской задумки. 
+                                    </p>
+                                    <p class="showe-more-text-item">Преимуществом богемского стиля является, то, что даже самая непримечательная мебель может преобразиться и 
+                                        заиграть радужными красками, если декорировать её цветными покрывалами, пледами и подушками разных форм и размеров.
+                                    </p>
+                                    <p class="showe-more-text-item">Пол, потолок и стены </p>
+                                    <p>Характерной особенностью стиля «бохо» в отделке пола, потолка и стен является применение натуральных материалов. 
+                                        Линолеум, пластиковые окна и жалюзи здесь неуместны. 
+                                    </p>
+                                    <p class="showe-more-text-item">Для пола желательно использовать паркет, камень, керамику или в исключительных случаях ламинат, имитирующий 
+                                        древесину. Для потолка подойдёт обыкновенная побелка, лепнина или матовая натяжная ткань. 
+                                    </p>                   
+                                    <p class="showe-more-text-item">Стены – неотъемлемая часть декора. Их можно окрасить в однотонный яркий цвет и сделать трафаретную роспись. 
+                                        Ковры и панно создадут уютную атмосферу. Для этого стиля подойдут и обои с необычным орнаментом.
+                                    </p>
+                                    <p class="showe-more-text-item">Освещение <br> 
+                                        Идеально если помещение оборудовано широкими окнами, пропускающими естественный солнечный свет. 
+                                        Что касается электрического освещения, то предпочтение нужно отдать мягкому, тёплому варианту. 
+                                        Этого можно добиться при помощи абажуров или светильников. 
+                                    </p>
+                                    <p class="showe-more-text-item">Текстиль <br> 
+                                        При оформлении «бохо» интерьера наиболее существенная роль отводится текстилю. Шторы, пледы, ковры, 
+                                        скатерти и салфетка – обязательные предметы декора. Цветовая палитра зависит только от вкуса хозяина 
+                                        дома, а вот по качеству лучше отдавать предпочтения тяжёлым тканям. 
+                                    </p>
+                                    <p class="showe-more-text-item">Различные детали декора <br> 
+                                        В выборе количества интерьерных аксессуаров ограничений нет. Это могут быть: </p>                        
+                                    <p class="showe-more-text-item">картины; <br>
+                                        сувениры; <br>
+                                        книги; <br>
+                                        фоторамки; <br>
+                                        статуэтки; <br>
+                                        светильники; <br> 
+                                        панно; <br>
+                                        поделки ручной работы; <br>
+                                        антикварные предметы. <br>
+                                        Декоративные элементы необходимо расположить так, чтобы они всегда находились на виду. 
+                                    </p>
+                                    <p class="showe-more-text-item">ИДЕИ ДЛЯ ДИЗАЙНА ИНТЕРЬЕРА <br>
+                                        Со временем, у этого стиля образовался ряд разветвлений, которые имеют свои характерные особенности. 
+                                        Рассмотрим самые популярные направления: 
+                                    </p>                        
+                                    <p class="showe-more-text-item">Классическое. «Бохо-классик» отличают строгая мебель и тяжёлые текстильные ткани (гобелен, атлас, бархат). 
+                                        В цветовой палитре преобладают коричневые, бежевые оттенки и золото. Разбавить излишнюю чопорность помогут 
+                                        небольшие детали этно-стиля. 
+                                        Роскошное. Стиль «бохо-шик» в интерьере считается наиболее распространённым. Здесь используются радужные 
+                                        оттенки, поднимающие настроение. 
+                                        Экологическое. Эко-интерьер не приемлет искусственных вещей. Всё должно быть натуральное, даже незначительные 
+                                        детали. Деревянная мебель, каменный пол, керамика, кожа, рогожка, лён, шёлк дарят ощущение практичности и 
+                                        изысканности. 
+                                        Гламурное. Характеризуется сочетанием огромного количества гламурных и винтажных вещичек. Эта разновидность 
+                                        «бохо» является настоящей проверкой для хозяина дома на предмет наличия у него утончённого вкуса и изысканности. 
+                                        Бохо-хиппи. Это направление является предшественником современного «бохо». Он характеризуется яркими 
+                                        орнаментами, множеством декоративных элементов. Кальяны, аромолампы и музыкальные инструменты создают 
+                                        свободолюбивую, немного легкомысленную атмосферу. 
+                                    </p>
+                                </span>
+                                        <button onclick="readMoreEight()" type="button" class="blog-more-link" id="btnBlogReadEight">Читать полностью</button>
+                                    </div>
+                                </div>
+                                <div class="blog-share">
+                                    <p class="blog-share-name">Поделиться:</p>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon1.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon2.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon3.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon4.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon5.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon6.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon7.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon8.png" alt=""></a>
+                                    <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon9.png" alt=""></a>
+                                </div>
+                                <div class="blog-teg-other">
+                                    <p class="blog-teg-other-name">Теги:</p>
+                                    <p class="blog-teg-other-meaning">Дизайн интерьера<span>48</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slides-numbers">
+                            <span class="active">01</span>
+                            <span class="total"></span>
+                        </div>
+                    </div>
+
+                    <div class="blog-mob">
+                        <div class="blog-more">
+                            <h4 class="blog-more-title">Стиль контемпорари в дизайне интерьера</h4>
+                            <div class="blog-more-other">
+                                <p class="blog-more-other-data">4 апреля 2018 г.</p>
+                                <p class="blog-more-other-view"><span>5704</span></p>
+                            </div>
+                            <img class="blog-more-img" src="assets/img/blog-info-img-1.png" alt="">
+                            <div class="blog-more-description">
+                                <p class="showe-more-text-item">Своеобразный девиз интерьера в модном ныне стиле контемпорари — максимум минимума.
+                                    Это стиль где приветствуется свобода выбора, где нет практически никаких условностей
+                                    и ограничений. Интерьер идеально подходит для современной молодежи, не любящей обилие
+                                    мебели, стремящейся к предельной функциональности каждого предмета и простору в комнате.
+                                    Внешне контемп ближе всего к минимализму и классическому дизайну, основные принципы
+                                    базируются на трех «китах»: простота, функциональность и максимальное удобство.
+                                </p>
+                                <span class="more" id="moreOneMob">
+                            <p>Своеобразный девиз интерьера в модном ныне стиле контемпорари — максимум минимума. 
+                                Это стиль где приветствуется свобода выбора, где нет практически никаких условностей 
+                                и ограничений. Интерьер идеально подходит для современной молодежи, не любящей обилие 
+                                мебели, стремящейся к предельной функциональности каждого предмета и простору в комнате. 
+                                Внешне контемп ближе всего к минимализму и классическому дизайну, основные принципы 
+                                базируются на трех «китах»: простота, функциональность и максимальное удобство.
+                            </p>
+                        </span>
+                                <button onclick="readMoreOne()" type="button" class="blog-more-link" id="btnBlogReadOneMob">Читать полностью</button>
+                            </div>
+                        </div>
+
+                        <div class="blog-more">
+                            <h4 class="blog-more-title">Скандинавский стиль в интерьере</h4>
+                            <div class="blog-more-other">
+                                <p class="blog-more-other-data">8 марта 2018 г.</p>
+                                <p class="blog-more-other-view"><span>3620</span></p>
+                            </div>
+                            <img class="blog-more-img" src="assets/img/blog-info-img-2.png" alt="">
+                            <div class="blog-more-description">
+                                <p class="showe-more-text-item">Скандинавский дизайн интерьера возник в середине прошлого века в послевоенный период, когда
+                                    разрушенным европейским городам требовалось много функциональной мебели. Национальной особенностью
+                                    стран Скандинавии было обилие дерева и мастеров, умеющих с ним обращаться. Первыми в этом
+                                    направлении преуспели датчане, использовавшие преимущественно тиковое дерево. Позже они стали
+                                    активно применять фанеру и пластиковый материал. Затем идею подхватили шведы, выпускавшие по
+                                    большей части кухни, а потом уже всю остальную мебель. А с 70 годов началось массовое распространение
+                                    мебели из сосны под торговой маркой «Икея».
+                                </p>
+                                <span class="more" id="moreTwoMob">
+                            <p>Скандинавский дизайн интерьера возник в середине прошлого века в послевоенный период, когда 
+                                разрушенным европейским городам требовалось много функциональной мебели. Национальной особенностью 
+                                стран Скандинавии было обилие дерева и мастеров, умеющих с ним обращаться. Первыми в этом 
+                                направлении преуспели датчане, использовавшие преимущественно тиковое дерево. Позже они стали 
+                                активно применять фанеру и пластиковый материал. Затем идею подхватили шведы, выпускавшие по 
+                                большей части кухни, а потом уже всю остальную мебель. А с 70 годов началось массовое распространение 
+                                мебели из сосны под торговой маркой «Икея».
+                            </p>
+                        </span>
+                                <button onclick="readMoreTwo()" type="button" class="blog-more-link" id="btnBlogReadTwoMob">Читать полностью</button>
+                            </div>
+                        </div>
+
+                        <div class="blog-more">
+                            <h4 class="blog-more-title">Средиземноморский стиль в дизайне интерьера</h4>
+                            <div class="blog-more-other">
+                                <p class="blog-more-other-data">21 февраля 2018 г.</p>
+                                <p class="blog-more-other-view"><span>3620</span></p>
+                            </div>
+                            <img class="blog-more-img" src="assets/img/blog-info-img-3.png" alt="">
+                            <div class="blog-more-description">
+                                <p class="showe-more-text-item">Продуманность и практичность наряду с лёгкостью, свежестью и естественными тонами — всё это отличительные
+                                    признаки дизайна в средиземноморском стиле. Здесь отсутствует роскошь, экстравагантность, вычурный декор,
+                                    витиеватая мебель.
+                                    Основа этого направления зародилась ещё в начале ХХ века в Тоскане, находившейся в Италии, и в последствии
+                                    перенята странами Средиземноморья: Испанией, Грецией, Францией, Тунисом, Египтом, Алжиром, Марокко и др.
+                                    В то время территории этих стран были практически полностью заселены небогатыми земледельцами, а большинство
+                                    архитектурных построек представляло переплетение античной культуры и простого крестьянского быта.
+                                </p>
+                                <span class="more" id="moreThreeMob">
+                            <p class="showe-more-text-item">Продуманность и практичность наряду с лёгкостью, свежестью и естественными тонами — всё это отличительные 
+                                признаки дизайна в средиземноморском стиле. Здесь отсутствует роскошь, экстравагантность, вычурный декор, 
+                                витиеватая мебель.
+                                Основа этого направления зародилась ещё в начале ХХ века в Тоскане, находившейся в Италии, и в последствии 
+                                перенята странами Средиземноморья: Испанией, Грецией, Францией, Тунисом, Египтом, Алжиром, Марокко и др. 
+                                В то время территории этих стран были практически полностью заселены небогатыми земледельцами, а большинство 
+                                архитектурных построек представляло переплетение античной культуры и простого крестьянского быта.
+                            </p>
+                        </span>
+                                <button onclick="readMoreThree()" type="button" class="blog-more-link" id="btnBlogReadThreeMob">Читать полностью</button>
+                            </div>
+                        </div>
+
+                        <div class="blog-more">
+                            <h4 class="blog-more-title">Стиль бохо в дизайне интерьера</h4>
+                            <div class="blog-more-other">
+                                <p class="blog-more-other-data">21 февраля 2018 г.</p>
+                                <p class="blog-more-other-view"><span>3620</span></p>
+                            </div>
+                            <img class="blog-more-img" src="assets/img/blog-info-img-4.png" alt="">
+                            <div class="blog-more-description">
+                                <p class="showe-more-text-item">Термин «бохо» получил широкое распространение в 2000 годах, применительно к яркой одежде с этническими
+                                    элементами и множеством массивных аксессуаров. Это название имеет французское происхождение «bohémiens»
+                                    и означает «цыганщина», так как данное направление зародилось в Богемии, где когда-то проживали цыгане.
+                                    «Бохо» в дизайне интерьера характеризуется буйством красок, сочетанием неподходящих друг другу вещей,
+                                    цветов и деталей убранства. Чтобы оформить помещение в таком виде, нужен креативный подход, определённая
+                                    доля смелости и утончённый вкус.
+                                </p>
+                                <span class="more" id="moreFourMob">
+                            <p class="showe-more-text-item">Тем не менее каждый желающий может «богемно» украсить свою квартиру, имея чувство цвета и зная ключевые 
+                                особенности дизайна, а именно: 
+                            </p>
+                            <p class="showe-more-text-item">Выбор идеи, которая будет задавать главное направление в построении интерьера. За основу можно взять восточные, 
+                                европейские или современные мотивы, демонстрируя тем самым гармоничное сочетание, а не беспорядочное нагромождение 
+                                разношёрстных вещей. 
+                                Многообразие ткани, обилие света, комнатных растений и различных декоративных предметов, изысканно расставленных 
+                                на полу, открытых полках, этажерках. 
+                                Преобладание в интерьере яркой и насыщенной цветовой палитры, которая должна соответствовать стилю и связывать в 
+                                одно целое все детали и акценты.
+                            </p>
+                            <p class="showe-more-text-item">ДЛЯ КОГО ПОДОЙДЁТ И В КАКОМ ПОМЕЩЕНИИ ЛУЧШЕ ИСПОЛЬЗОВАТЬ?</p>
+                            <p class="showe-more-text-item">Стиль «бохо» чаще всего можно встретить в домах творческих незаурядных людей: артистов, модельеров, писателей, 
+                                художников, имеющих собственное мнение и видение мира, которые ценят индивидуальность и не подчиняются общественным 
+                                устоям. Они тяготеют ко всему яркому и красочному и чувствуют себя комфортно среди многообразия различных «штуковин». 
+                                Это любители хендмейда, эклектики, винтажных вещей с элементами этно. 
+                            </p>
+                            <p class="showe-more-text-item">Напротив, минималисты и педантичные люди, стремящиеся к простоте и упорядоченности во всём, в том числе и собственном жилище, 
+                                будут чувствовать себя неуютно в пёстром, насыщенном красками помещении с большим количеством предметов. 
+                            </p>
+                            <p class="showe-more-text-item">Тем не менее, как бы парадоксально это не звучало, такой интерьер не подойдёт людям, которые не приемлют аккуратность. 
+                                Ведь за кажущийся, с первого взгляда, захламлённостью, прослеживается неповторимая гармония и порядок. 
+                            </p>
+                            <p class="showe-more-text-item">«Бохо» можно использовать практически в любом помещении. Но наиболее точно характер и внутренний мир хозяина дома 
+                                прослеживается в спальне и кухне. Интерьер спальни в стиле бохо должен создавать расслабленную атмосферу вальяжности. 
+                            </p>
+                            <p class="showe-more-text-item">Если у вас отсутствует кровать, то это как раз то, что нужно. Матрас на полу вполне вписывается в концепцию стиля. 
+                                Любите спать на кровати? Тогда выбирайте деревянный или кованый вариант. 
+                            </p>                    
+                            <p class="showe-more-text-item">Объёмные разноцветные пледы и покрывала складками спущенные на пол демонстрируют некоторую небрежность и 
+                                домашний уют. Для спальни подойдут лёгкие прозрачные занавески, кашпо и макраме. Отлично будут смотреться принты 
+                                с незатейливыми рисунками и узорами. А марокканские половички внесут в спальню восточный колорит. 
+                            </p>                    
+                            <p>Выбор декора здесь безграничен: свечи, ловцы снов, бусы, гирлянды и живые цветы – всё это гармонично впишется в 
+                                спальню. Стиль бохо в интерьере кухни ассоциируется с оригинальностью и неповторимым уютом, что притягивает к 
+                                себе хозяев, даже когда они не голодны. 
+                            </p>
+                            <p class="showe-more-text-item">Богемскую кухню отличают следующие характерные черты:</p>
+                            <p class="showe-more-text-item">деревянный или каменный пол с обилием ковриков; </p>
+                            <p class="showe-more-text-item">побеленные или окрашенные стены (обои, как правило, отсутствуют); </p>
+                            <p class="showe-more-text-item">натуральная мебель, с обязательным присутствием дивана и многочисленных пуфов; </p>
+                            <p class="showe-more-text-item">отсутствие современной кухонной техники (комбайнов, телевизоров, электрических чайников); </p>
+                            <p class="showe-more-text-item">множество полочек с различной утварью вроде баночек со специями, вазочек и мисочек, небольших деревянных фигурок 
+                                и статуэток. 
+                            </p>
+                            <p class="showe-more-text-item">ЭЛЕМЕНТЫ СТИЛЯ <br>
+                            «Бохо» открывает огромные просторы для воплощения творческой фантазии и свободы самовыражения.
+                            <p class="showe-more-text-item">Цветовые решения <br> 
+                                Этот стиль не предполагает каких-либо ограничений в выборе цветовых композиций. Главное, чтобы в этом помещении 
+                                было приятно находиться, и не уставали глаза. Чаще всего используют оттенки: 
+                            </p>
+                            <p class="showe-more-text-item">красного;<br> 
+                                жёлтого; <br> 
+                                оранжевого; <br> 
+                                зелёного; <br> 
+                                синего. <br> 
+                                Мебель <br> 
+                                Непременный атрибут стиля – мягкая мебель: диваны, кресла, пуфы, кровати. И вовсе не обязательно, чтобы они 
+                                были с одного гарнитура. Их количество подбирается индивидуально, в зависимости от дизайнерской задумки. 
+                            </p>
+                            <p class="showe-more-text-item">Преимуществом богемского стиля является, то, что даже самая непримечательная мебель может преобразиться и 
+                                заиграть радужными красками, если декорировать её цветными покрывалами, пледами и подушками разных форм и размеров.
+                            </p>
+                            <p class="showe-more-text-item">Пол, потолок и стены </p>
+                            <p>Характерной особенностью стиля «бохо» в отделке пола, потолка и стен является применение натуральных материалов. 
+                                Линолеум, пластиковые окна и жалюзи здесь неуместны. 
+                            </p>
+                            <p class="showe-more-text-item">Для пола желательно использовать паркет, камень, керамику или в исключительных случаях ламинат, имитирующий 
+                                древесину. Для потолка подойдёт обыкновенная побелка, лепнина или матовая натяжная ткань. 
+                            </p>                   
+                            <p class="showe-more-text-item">Стены – неотъемлемая часть декора. Их можно окрасить в однотонный яркий цвет и сделать трафаретную роспись. 
+                                Ковры и панно создадут уютную атмосферу. Для этого стиля подойдут и обои с необычным орнаментом.
+                            </p>
+                            <p class="showe-more-text-item">Освещение <br> 
+                                Идеально если помещение оборудовано широкими окнами, пропускающими естественный солнечный свет. 
+                                Что касается электрического освещения, то предпочтение нужно отдать мягкому, тёплому варианту. 
+                                Этого можно добиться при помощи абажуров или светильников. 
+                            </p>
+                            <p class="showe-more-text-item">Текстиль <br> 
+                                При оформлении «бохо» интерьера наиболее существенная роль отводится текстилю. Шторы, пледы, ковры, 
+                                скатерти и салфетка – обязательные предметы декора. Цветовая палитра зависит только от вкуса хозяина 
+                                дома, а вот по качеству лучше отдавать предпочтения тяжёлым тканям. 
+                            </p>
+                            <p class="showe-more-text-item">Различные детали декора <br> 
+                                В выборе количества интерьерных аксессуаров ограничений нет. Это могут быть: </p>                        
+                            <p class="showe-more-text-item">картины; <br>
+                                сувениры; <br>
+                                книги; <br>
+                                фоторамки; <br>
+                                статуэтки; <br>
+                                светильники; <br> 
+                                панно; <br>
+                                поделки ручной работы; <br>
+                                антикварные предметы. <br>
+                                Декоративные элементы необходимо расположить так, чтобы они всегда находились на виду. 
+                            </p>
+                            <p class="showe-more-text-item">ИДЕИ ДЛЯ ДИЗАЙНА ИНТЕРЬЕРА <br>
+                                Со временем, у этого стиля образовался ряд разветвлений, которые имеют свои характерные особенности. 
+                                Рассмотрим самые популярные направления: 
+                            </p>                        
+                            <p class="showe-more-text-item">Классическое. «Бохо-классик» отличают строгая мебель и тяжёлые текстильные ткани (гобелен, атлас, бархат). 
+                                В цветовой палитре преобладают коричневые, бежевые оттенки и золото. Разбавить излишнюю чопорность помогут 
+                                небольшие детали этно-стиля. 
+                                Роскошное. Стиль «бохо-шик» в интерьере считается наиболее распространённым. Здесь используются радужные 
+                                оттенки, поднимающие настроение. 
+                                Экологическое. Эко-интерьер не приемлет искусственных вещей. Всё должно быть натуральное, даже незначительные 
+                                детали. Деревянная мебель, каменный пол, керамика, кожа, рогожка, лён, шёлк дарят ощущение практичности и 
+                                изысканности. 
+                                Гламурное. Характеризуется сочетанием огромного количества гламурных и винтажных вещичек. Эта разновидность 
+                                «бохо» является настоящей проверкой для хозяина дома на предмет наличия у него утончённого вкуса и изысканности. 
+                                Бохо-хиппи. Это направление является предшественником современного «бохо». Он характеризуется яркими 
+                                орнаментами, множеством декоративных элементов. Кальяны, аромолампы и музыкальные инструменты создают 
+                                свободолюбивую, немного легкомысленную атмосферу. 
+                            </p>
+                        </span>
+                                <button onclick="readMoreFour()" type="button" class="blog-more-link" id="btnBlogReadFourMob">Читать полностью</button>
+                            </div>
+                        </div>
+
+                        <div class="blog-more">
+                            <h4 class="blog-more-title">Стиль контемпорари в дизайне интерьера</h4>
+                            <div class="blog-more-other">
+                                <p class="blog-more-other-data">4 апреля 2018 г.</p>
+                                <p class="blog-more-other-view"><span>5704</span></p>
+                            </div>
+                            <img class="blog-more-img" src="assets/img/blog-info-img-1.png" alt="">
+                            <div class="blog-more-description">
+                                <p class="showe-more-text-item">Своеобразный девиз интерьера в модном ныне стиле контемпорари — максимум минимума.
+                                    Это стиль где приветствуется свобода выбора, где нет практически никаких условностей
+                                    и ограничений. Интерьер идеально подходит для современной молодежи, не любящей обилие
+                                    мебели, стремящейся к предельной функциональности каждого предмета и простору в комнате.
+                                    Внешне контемп ближе всего к минимализму и классическому дизайну, основные принципы
+                                    базируются на трех «китах»: простота, функциональность и максимальное удобство.
+                                </p>
+                                <span class="more" id="moreFiveMob">
+                            <p>Своеобразный девиз интерьера в модном ныне стиле контемпорари — максимум минимума. 
+                                Это стиль где приветствуется свобода выбора, где нет практически никаких условностей 
+                                и ограничений. Интерьер идеально подходит для современной молодежи, не любящей обилие 
+                                мебели, стремящейся к предельной функциональности каждого предмета и простору в комнате. 
+                                Внешне контемп ближе всего к минимализму и классическому дизайну, основные принципы 
+                                базируются на трех «китах»: простота, функциональность и максимальное удобство.
+                            </p>
+                        </span>
+                                <button onclick="readMoreFive()" type="button" class="blog-more-link" id="btnBlogReadFiveMob">Читать полностью</button>
+                            </div>
+                        </div>
+
+                        <div class="blog-more">
+                            <h4 class="blog-more-title">Скандинавский стиль в интерьере</h4>
+                            <div class="blog-more-other">
+                                <p class="blog-more-other-data">8 марта 2018 г.</p>
+                                <p class="blog-more-other-view"><span>3620</span></p>
+                            </div>
+                            <img class="blog-more-img" src="assets/img/blog-info-img-2.png" alt="">
+                            <div class="blog-more-description">
+                                <p class="showe-more-text-item">Скандинавский дизайн интерьера возник в середине прошлого века в послевоенный период, когда
+                                    разрушенным европейским городам требовалось много функциональной мебели. Национальной особенностью
+                                    стран Скандинавии было обилие дерева и мастеров, умеющих с ним обращаться. Первыми в этом
+                                    направлении преуспели датчане, использовавшие преимущественно тиковое дерево. Позже они стали
+                                    активно применять фанеру и пластиковый материал. Затем идею подхватили шведы, выпускавшие по
+                                    большей части кухни, а потом уже всю остальную мебель. А с 70 годов началось массовое распространение
+                                    мебели из сосны под торговой маркой «Икея».
+                                </p>
+                                <span class="more" id="moreSixMob">
+                            <p>Скандинавский дизайн интерьера возник в середине прошлого века в послевоенный период, когда 
+                                разрушенным европейским городам требовалось много функциональной мебели. Национальной особенностью 
+                                стран Скандинавии было обилие дерева и мастеров, умеющих с ним обращаться. Первыми в этом 
+                                направлении преуспели датчане, использовавшие преимущественно тиковое дерево. Позже они стали 
+                                активно применять фанеру и пластиковый материал. Затем идею подхватили шведы, выпускавшие по 
+                                большей части кухни, а потом уже всю остальную мебель. А с 70 годов началось массовое распространение 
+                                мебели из сосны под торговой маркой «Икея».
+                            </p>
+                        </span>
+                                <button onclick="readMoreSix()" type="button" class="blog-more-link" id="btnBlogReadSixMob">Читать полностью</button>
+                            </div>
+                        </div>
+
+                        <div class="blog-more">
+                            <h4 class="blog-more-title">Средиземноморский стиль в дизайне интерьера</h4>
+                            <div class="blog-more-other">
+                                <p class="blog-more-other-data">21 февраля 2018 г.</p>
+                                <p class="blog-more-other-view"><span>3620</span></p>
+                            </div>
+                            <img class="blog-more-img" src="assets/img/blog-info-img-3.png" alt="">
+                            <div class="blog-more-description">
+                                <p class="showe-more-text-item">Продуманность и практичность наряду с лёгкостью, свежестью и естественными тонами — всё это отличительные
+                                    признаки дизайна в средиземноморском стиле. Здесь отсутствует роскошь, экстравагантность, вычурный декор,
+                                    витиеватая мебель.
+                                    Основа этого направления зародилась ещё в начале ХХ века в Тоскане, находившейся в Италии, и в последствии
+                                    перенята странами Средиземноморья: Испанией, Грецией, Францией, Тунисом, Египтом, Алжиром, Марокко и др.
+                                    В то время территории этих стран были практически полностью заселены небогатыми земледельцами, а большинство
+                                    архитектурных построек представляло переплетение античной культуры и простого крестьянского быта.
+                                </p>
+                                <span class="more" id="moreSevenMob">
+                            <p class="showe-more-text-item">Продуманность и практичность наряду с лёгкостью, свежестью и естественными тонами — всё это отличительные 
+                                признаки дизайна в средиземноморском стиле. Здесь отсутствует роскошь, экстравагантность, вычурный декор, 
+                                витиеватая мебель.
+                                Основа этого направления зародилась ещё в начале ХХ века в Тоскане, находившейся в Италии, и в последствии 
+                                перенята странами Средиземноморья: Испанией, Грецией, Францией, Тунисом, Египтом, Алжиром, Марокко и др. 
+                                В то время территории этих стран были практически полностью заселены небогатыми земледельцами, а большинство 
+                                архитектурных построек представляло переплетение античной культуры и простого крестьянского быта.
+                            </p>
+                        </span>
+                                <button onclick="readMoreSeven()" type="button" class="blog-more-link" id="btnBlogReadSevenMob">Читать полностью</button>
+                            </div>
+                        </div>
+
+                        <div class="blog-more">
+                            <h4 class="blog-more-title">Стиль бохо в дизайне интерьера</h4>
+                            <div class="blog-more-other">
+                                <p class="blog-more-other-data">21 февраля 2018 г.</p>
+                                <p class="blog-more-other-view"><span>3620</span></p>
+                            </div>
+                            <img class="blog-more-img" src="assets/img/blog-info-img-4.png" alt="">
+                            <div class="blog-more-description">
+                                <p class="showe-more-text-item">Термин «бохо» получил широкое распространение в 2000 годах, применительно к яркой одежде с этническими
+                                    элементами и множеством массивных аксессуаров. Это название имеет французское происхождение «bohémiens»
+                                    и означает «цыганщина», так как данное направление зародилось в Богемии, где когда-то проживали цыгане.
+                                    «Бохо» в дизайне интерьера характеризуется буйством красок, сочетанием неподходящих друг другу вещей,
+                                    цветов и деталей убранства. Чтобы оформить помещение в таком виде, нужен креативный подход, определённая
+                                    доля смелости и утончённый вкус.
+                                </p>
+                                <span class="more" id="moreEightMob">
+                            <p class="showe-more-text-item">Тем не менее каждый желающий может «богемно» украсить свою квартиру, имея чувство цвета и зная ключевые 
+                                особенности дизайна, а именно: 
+                            </p>
+                            <p class="showe-more-text-item">Выбор идеи, которая будет задавать главное направление в построении интерьера. За основу можно взять восточные, 
+                                европейские или современные мотивы, демонстрируя тем самым гармоничное сочетание, а не беспорядочное нагромождение 
+                                разношёрстных вещей. 
+                                Многообразие ткани, обилие света, комнатных растений и различных декоративных предметов, изысканно расставленных 
+                                на полу, открытых полках, этажерках. 
+                                Преобладание в интерьере яркой и насыщенной цветовой палитры, которая должна соответствовать стилю и связывать в 
+                                одно целое все детали и акценты.
+                            </p>
+                            <p class="showe-more-text-item">ДЛЯ КОГО ПОДОЙДЁТ И В КАКОМ ПОМЕЩЕНИИ ЛУЧШЕ ИСПОЛЬЗОВАТЬ?</p>
+                            <p class="showe-more-text-item">Стиль «бохо» чаще всего можно встретить в домах творческих незаурядных людей: артистов, модельеров, писателей, 
+                                художников, имеющих собственное мнение и видение мира, которые ценят индивидуальность и не подчиняются общественным 
+                                устоям. Они тяготеют ко всему яркому и красочному и чувствуют себя комфортно среди многообразия различных «штуковин». 
+                                Это любители хендмейда, эклектики, винтажных вещей с элементами этно. 
+                            </p>
+                            <p class="showe-more-text-item">Напротив, минималисты и педантичные люди, стремящиеся к простоте и упорядоченности во всём, в том числе и собственном жилище, 
+                                будут чувствовать себя неуютно в пёстром, насыщенном красками помещении с большим количеством предметов. 
+                            </p>
+                            <p class="showe-more-text-item">Тем не менее, как бы парадоксально это не звучало, такой интерьер не подойдёт людям, которые не приемлют аккуратность. 
+                                Ведь за кажущийся, с первого взгляда, захламлённостью, прослеживается неповторимая гармония и порядок. 
+                            </p>
+                            <p class="showe-more-text-item">«Бохо» можно использовать практически в любом помещении. Но наиболее точно характер и внутренний мир хозяина дома 
+                                прослеживается в спальне и кухне. Интерьер спальни в стиле бохо должен создавать расслабленную атмосферу вальяжности. 
+                            </p>
+                            <p class="showe-more-text-item">Если у вас отсутствует кровать, то это как раз то, что нужно. Матрас на полу вполне вписывается в концепцию стиля. 
+                                Любите спать на кровати? Тогда выбирайте деревянный или кованый вариант. 
+                            </p>                    
+                            <p class="showe-more-text-item">Объёмные разноцветные пледы и покрывала складками спущенные на пол демонстрируют некоторую небрежность и 
+                                домашний уют. Для спальни подойдут лёгкие прозрачные занавески, кашпо и макраме. Отлично будут смотреться принты 
+                                с незатейливыми рисунками и узорами. А марокканские половички внесут в спальню восточный колорит. 
+                            </p>                    
+                            <p>Выбор декора здесь безграничен: свечи, ловцы снов, бусы, гирлянды и живые цветы – всё это гармонично впишется в 
+                                спальню. Стиль бохо в интерьере кухни ассоциируется с оригинальностью и неповторимым уютом, что притягивает к 
+                                себе хозяев, даже когда они не голодны. 
+                            </p>
+                            <p class="showe-more-text-item">Богемскую кухню отличают следующие характерные черты:</p>
+                            <p class="showe-more-text-item">деревянный или каменный пол с обилием ковриков; </p>
+                            <p class="showe-more-text-item">побеленные или окрашенные стены (обои, как правило, отсутствуют); </p>
+                            <p class="showe-more-text-item">натуральная мебель, с обязательным присутствием дивана и многочисленных пуфов; </p>
+                            <p class="showe-more-text-item">отсутствие современной кухонной техники (комбайнов, телевизоров, электрических чайников); </p>
+                            <p class="showe-more-text-item">множество полочек с различной утварью вроде баночек со специями, вазочек и мисочек, небольших деревянных фигурок 
+                                и статуэток. 
+                            </p>
+                            <p class="showe-more-text-item">ЭЛЕМЕНТЫ СТИЛЯ <br>
+                            «Бохо» открывает огромные просторы для воплощения творческой фантазии и свободы самовыражения.
+                            <p class="showe-more-text-item">Цветовые решения <br> 
+                                Этот стиль не предполагает каких-либо ограничений в выборе цветовых композиций. Главное, чтобы в этом помещении 
+                                было приятно находиться, и не уставали глаза. Чаще всего используют оттенки: 
+                            </p>
+                            <p class="showe-more-text-item">красного;<br> 
+                                жёлтого; <br> 
+                                оранжевого; <br> 
+                                зелёного; <br> 
+                                синего. <br> 
+                                Мебель <br> 
+                                Непременный атрибут стиля – мягкая мебель: диваны, кресла, пуфы, кровати. И вовсе не обязательно, чтобы они 
+                                были с одного гарнитура. Их количество подбирается индивидуально, в зависимости от дизайнерской задумки. 
+                            </p>
+                            <p class="showe-more-text-item">Преимуществом богемского стиля является, то, что даже самая непримечательная мебель может преобразиться и 
+                                заиграть радужными красками, если декорировать её цветными покрывалами, пледами и подушками разных форм и размеров.
+                            </p>
+                            <p class="showe-more-text-item">Пол, потолок и стены </p>
+                            <p>Характерной особенностью стиля «бохо» в отделке пола, потолка и стен является применение натуральных материалов. 
+                                Линолеум, пластиковые окна и жалюзи здесь неуместны. 
+                            </p>
+                            <p class="showe-more-text-item">Для пола желательно использовать паркет, камень, керамику или в исключительных случаях ламинат, имитирующий 
+                                древесину. Для потолка подойдёт обыкновенная побелка, лепнина или матовая натяжная ткань. 
+                            </p>                   
+                            <p class="showe-more-text-item">Стены – неотъемлемая часть декора. Их можно окрасить в однотонный яркий цвет и сделать трафаретную роспись. 
+                                Ковры и панно создадут уютную атмосферу. Для этого стиля подойдут и обои с необычным орнаментом.
+                            </p>
+                            <p class="showe-more-text-item">Освещение <br> 
+                                Идеально если помещение оборудовано широкими окнами, пропускающими естественный солнечный свет. 
+                                Что касается электрического освещения, то предпочтение нужно отдать мягкому, тёплому варианту. 
+                                Этого можно добиться при помощи абажуров или светильников. 
+                            </p>
+                            <p class="showe-more-text-item">Текстиль <br> 
+                                При оформлении «бохо» интерьера наиболее существенная роль отводится текстилю. Шторы, пледы, ковры, 
+                                скатерти и салфетка – обязательные предметы декора. Цветовая палитра зависит только от вкуса хозяина 
+                                дома, а вот по качеству лучше отдавать предпочтения тяжёлым тканям. 
+                            </p>
+                            <p class="showe-more-text-item">Различные детали декора <br> 
+                                В выборе количества интерьерных аксессуаров ограничений нет. Это могут быть: </p>                        
+                            <p class="showe-more-text-item">картины; <br>
+                                сувениры; <br>
+                                книги; <br>
+                                фоторамки; <br>
+                                статуэтки; <br>
+                                светильники; <br> 
+                                панно; <br>
+                                поделки ручной работы; <br>
+                                антикварные предметы. <br>
+                                Декоративные элементы необходимо расположить так, чтобы они всегда находились на виду. 
+                            </p>
+                            <p class="showe-more-text-item">ИДЕИ ДЛЯ ДИЗАЙНА ИНТЕРЬЕРА <br>
+                                Со временем, у этого стиля образовался ряд разветвлений, которые имеют свои характерные особенности. 
+                                Рассмотрим самые популярные направления: 
+                            </p>                        
+                            <p class="showe-more-text-item">Классическое. «Бохо-классик» отличают строгая мебель и тяжёлые текстильные ткани (гобелен, атлас, бархат). 
+                                В цветовой палитре преобладают коричневые, бежевые оттенки и золото. Разбавить излишнюю чопорность помогут 
+                                небольшие детали этно-стиля. 
+                                Роскошное. Стиль «бохо-шик» в интерьере считается наиболее распространённым. Здесь используются радужные 
+                                оттенки, поднимающие настроение. 
+                                Экологическое. Эко-интерьер не приемлет искусственных вещей. Всё должно быть натуральное, даже незначительные 
+                                детали. Деревянная мебель, каменный пол, керамика, кожа, рогожка, лён, шёлк дарят ощущение практичности и 
+                                изысканности. 
+                                Гламурное. Характеризуется сочетанием огромного количества гламурных и винтажных вещичек. Эта разновидность 
+                                «бохо» является настоящей проверкой для хозяина дома на предмет наличия у него утончённого вкуса и изысканности. 
+                                Бохо-хиппи. Это направление является предшественником современного «бохо». Он характеризуется яркими 
+                                орнаментами, множеством декоративных элементов. Кальяны, аромолампы и музыкальные инструменты создают 
+                                свободолюбивую, немного легкомысленную атмосферу. 
+                            </p>
+                        </span>
+                                <button onclick="readMoreEight()" type="button" class="blog-more-link" id="btnBlogReadEightMob">Читать полностью</button>
+                            </div>
+                        </div>
+                        <div class="blog-share">
+                            <p class="blog-share-name">Поделиться:</p>
+                            <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon1.png" alt=""></a>
+                            <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon2.png" alt=""></a>
+                            <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon3.png" alt=""></a>
+                            <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon4.png" alt=""></a>
+                            <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon5.png" alt=""></a>
+                            <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon6.png" alt=""></a>
+                            <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon7.png" alt=""></a>
+                            <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon8.png" alt=""></a>
+                            <a class="blog-share-link" href="#"><img class="blog-share-img" src="assets/img/blog-share-icon9.png" alt=""></a>
+                        </div>
+                        <div class="blog-teg-other">
+                            <p class="blog-teg-other-name">Теги:</p>
+                            <p class="blog-teg-other-meaning">Дизайн интерьера<span>48</span></p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary btmBlogMobMore">Загрузить еще статьи</button>
+                </div>
+
+
+                <div class="blog-teg">
+                    <ul class="blog-teg-list">
+                        <p>Теги</p>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Азиатский стиль<span>2</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Английский стиль<span>3</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Детская комната<span>2</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Дизайн загородного дома<span>2</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Дизайн интерьера<span>48</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Дизайн интерьера ванной<span>3</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Дизайн интерьера гостиной<span>5</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Дизайн интерьера кухни<span>6</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Дизайн интерьера офиса<span>1</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Дизайн интерьера прихожей<span>1</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Дизайн интерьера самостоятельно<span>3</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Дизайн интерьера спальни<span>3</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Дизайн интерьера туалета<span>1</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Дизайн интерьера хрущевки<span>1</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Классический стиль в интерьере<span>2</span></a></li>
+                        <li class="blog-teg-item"><a class="blog-teg-link" href="#">Ремонт квартир<span>5</span></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <main class="blog-receive-news">
+            <div class="container">
+                <form class="blog-receive-news-form form-block">
+                    <h2 class="blog-receive-news-form-title">Получать новости блога</h2>
+                    <div class="blog-receive-news-form-item">
+                        <input type="email" id="email" name="email" placeholder="Электронная почта">
+                    </div>
+                    <input type="button" class="btn btn-warning btn-open" value="Подписаться">
+                </form>
+                <div class="card-block" id="examplSYouProject">
+                    <h2 class="card-block-title">Ваша подписка оформленна !</h2>
+
+                    <button type="button" class="btn btn-warning btn-close-card">Закрыть окно</button>
+                </div>
+            </div>
+        </main>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <a href="index.html"><img class="footer-logo-img" src="assets/img/footer-logo.png"></a>
+                <div class="footer-logo-info">
+                    <span>2010-2022 Студия интерьера</span>
+                    <span>Custom Made, все права защищены</span>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleFooter">
+                Заказать звонок
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalToggleFooter" tabindex="-1" aria-labelledby="exampleModalToggleFooter" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalToggleFooter">Заказать звонок</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="modal-body-form">
+                                <div class="modal-body-form-item">
+                                    <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                </div>
+                                <div class="modal-body-form-item">
+                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                </div>
+                                <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalLabelFooterSent" data-bs-dismiss="modal" value="Отправить сообщение">
+                            <!--<button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalLabelFooterSent" data-bs-dismiss="modal">Отправить сообщение</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalLabelFooterSent" tabindex="-1" aria-labelledby="exampleModalLabelFooterSent" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLabelFooterSent">Вы заказали обратный звонок!</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-body-description">
+                                <p>Спасибо за ваше обращение.</p>
+                                <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <a class="footer-link" href="index.html">О нас</a>
+                    <a class="footer-link" href="portfolio.html">Портфолио</a>
+                    <a class="footer-link" href="#">Цены</a>
+                    <a class="footer-link" href="services.html">Услуги</a>
+                    <a class="footer-link" href="blog.html">Блог</a>
+                </div>
+                <div class="footer-links-column-two">
+                    <a class="footer-link" href="interior-design.html">Дизайн интерьера</a>
+                    <a class="footer-link" href="finishing-works.html">Отделочные работы</a>
+                    <a class="footer-link" href="authors-supervision.htm">Авторский надзор</a>
+                    <a class="footer-link" href="decorating.html">Декорирование</a>
+                    <a class="footer-link" href="reconnection-matching.html">Согласование перепланировки</a>
+                    <a class="footer-link" href="architectural-engineering.html">Архитектурное проектирование</a>
+                    <a class="footer-link" href="designer-furnitur.html">Авторская мебель</a>
+                </div>
+            </div>
+            <div class="footer-social-media">
+                <div class="footer-social-media-column">
+                    <div class="footer-social-media-item icon-email">cmade.spb@mail.ru</div>
+                    <div class="footer-social-media-item icon-inst">peterson.designer</div>
+                    <div class="footer-social-media-item icon-vk">peterson_designer</div>
+                </div>
+                <div class="footer-social-media-column">
+                    <div class="footer-social-media-item icon-telegram">@peterson.designer</div>
+                    <div class="footer-social-media-item icon-house">peterson.designer</div>
+                    <div class="footer-social-media-item icon-pinter">peterson.designer</div>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <div class="footer-contacts-item icon-local">
+                    <div class="city">Санкт-Петербург</div>
+                    <div class="city">ул. Уральская, 13</div>
+                </div>
+                <div class="footer-contacts-item icon-phone">
+                    <div class="phone">+7(905) 204-77-74</div>
+                    <div class="phone">+7(812) 715-02-75</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="assets/js/popper.min.js"></script>
+    <script defer src="assets/js/bootstrap.min.js"></script>
+    <script defer src="assets/js/slick.min.js"></script>
+    <script async src="assets/js/jquery.fancybox.min.js"></script>
+    <script defer src="assets/js/jquery.nice-select.min.js"></script>
+    <script defer src="assets/js/jquery-match-height.js"></script>
+    <script async src="assets/js/global.js"></script>
+
+</body>
+
+</html>

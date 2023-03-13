@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#188de7">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>Главная</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="assets/js/jQuery3.6.1.js"></script>
+</head>
+
+<body>
+
+    <div class='thetop'></div>
+    <div class='scrolltop'>
+        <div class='muve-top'></div>
+    </div>
+    <header>
+        <a href="markup.html" class="markup-link">markup</a>
+        <nav class="container navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+        <!--<img src="assets/img/logo.png" alt="logo">-->
+        <picture>
+          <source media="(min-width:992px)" srcset="assets/img/logo.png">
+          <!--<source media="(min-width:768px)" srcset="assets/img/logo-tablet.png">-->
+          <img src="assets/img/logo-mob.png" alt="logo">
+        </picture>
+      </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="about-studio.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Цены</a>
+                        </li>
+                    </ul>
+                    <div class="town">Санкт-Петербург ул. Уральская, 13</div>
+                    <button type="button" class="btn btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeader">
+                        Заказать проект
+                    </button>
+                    <div class="modal fade" id="exampleModalToggleHeader" tabindex="-1" aria-labelledby="exampleModalToggleLabelHeader" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalToggleLabelHeader">Заказать проект</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        Разрешите нам познакомиться с вами и узнать о вашем проекте. Мы подготовим для вас индивидуальное предложение.
+                                    </div>
+                                    <form class="modal-body-form">
+                                        <div class="modal-body-form-item">
+                                            <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                        </div>
+                                        <div class="modal-body-form-item">
+                                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                        </div>
+                                        <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeaderSent" data-bs-dismiss="modal" value="Отправить сообщение">
+                                    <!--<button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeaderSent" data-bs-dismiss="modal">Отправить сообщение</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggleHeaderSent" tabindex="-1" aria-labelledby="exampleModalLabelHeaderSent" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabelHeaderSent">Ваше сообщение отправлено!</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        <p>Спасибо за ваше обращение.</p>
+                                        <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="menu-toggler btn-menu" id="burgerMenu">
+                        <div class="burger-name">МЕНЮ</div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="nav-menu">
+                        <ul class="nav-menu-list" id="navMenu">
+                            <li class="nav-menu-item">
+                                <a href="about-studio.html" class="nav-menu-link">О нас</a>
+                            </li>
+                            <li class="nav-menu-item">
+                                <a href="services.html" class="nav-menu-link active-menu">Услуги
+                  <ul class="more-list">
+                    <li class="more-item">
+                      <a href="interior-design.html" class="more-link">Дизайн интерьера</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="finishing-works.html" class="more-link active-more">Отделочные работы</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="authors-supervision.html" class="more-link">Авторский надзор</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="decorating.html" class="more-link">Декорирование</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="reconnection-matching.html" class="more-link">Согласование перепланировки</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="architectural-engineering.html" class="more-link">Архитектурное проектирование</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="designer-furnitur.html" class="more-link">Авторская мебель</a>
+                            </li>
+                        </ul>
+                </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">Стоимость</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="portfolio.html" class="nav-menu-link">Портфолио</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="blog.html" class="nav-menu-link">Блог</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="contacts.html" class="nav-menu-link">Контакты</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main class="wrapper services">
+        <section class="s-our-services">
+            <div class="container">
+                <div class="our-services-info">
+                    <h2 class="our-services-title">Наши услуги</h2>
+                    <div class="our-services-description">
+                        Более 15 лет мы работаем в сфере проектирования дизайна интерьеров
+                        жилых и коммерческих помещений Санкт-Петербурга и Москвы.
+                    </div>
+                    <ul class="our-services-list">В студии интерьера Custom Made вы можете заказать:
+                        <li class="our-services-item">Дизайн интерьера</li>
+                        <li class="our-services-item">Отделочные работы</li>
+                        <li class="our-services-item">Декорирование интерьера</li>
+                        <li class="our-services-item">Авторский надзор</li>
+                        <li class="our-services-item">Согласование перепланировки</li>
+                        <li class="our-services-item">Архитектурное проектирование</li>
+                    </ul>
+                </div>
+                <div class="our-services-img">
+                    <img class="our-services-img-dectop" src="assets/img/our-services-img.png" alt="photo">
+                    <img class="our-services-img-mob" src="assets/img/our-services-img-mob.png" alt="photo">
+        </div>
+                </div>
+        </section>
+
+        <section class="s-interior-design">
+            <div class="container">
+                <img class="interior-design-img" src="assets/img/interior-design-img.png" alt="img">
+                <div class="interior-design-info">
+                    <h4 class="interior-design-title">Дизайн интерьера</h4>
+                    <div class="interior-design-description">CUSTOM MADE — уникальный дизайн интерьера и индивидуальный подход.
+                        Коллектив нашей студии состоит из профессионалов, которые рады помочь выразить неповторимый дух и образ
+                        свойственный только Вам.
+                    </div>
+                    <a href="interior-design.html" class="btn btn-secondary">Подробнее</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-finishing-work">
+            <div class="container">
+                <div class="finishing-work-info">
+                    <h4 class="finishing-work-title">Отделочные работы</h4>
+                    <div class="finishing-work-description">Мы предлагаем широкий спектр строительных, ремонтных
+                        и отделочных работ. Наши цены на отделочные работы
+                        демократичны и доступны. Вы можете убедиться в этом,
+                        просмотрев представленный ниже прайс-лист.
+                    </div>
+                    <a href="finishing-works.html" class="btn btn-secondary">Подробнее</a>
+                </div>
+                <img class="finishing-work-img" src="assets/img/finishing-work-img.png" alt="img">
+    </div>
+        </section>
+
+        <section class="s-architectural-design">
+            <div class="container">
+                <img class="architectural-design-img" src="assets/img/architectural-design-img.png" alt="img">
+                <div class="architectural-design-info">
+                    <h4 class="architectural-design-title">Архитектурное проектирование</h4>
+                    <div class="architectural-design-description">Создадим эскизные и полные архитектурные
+                        проекты с дизайнерской точки зрения. На начальном этапе учтем все нюансы планировки
+                        и эргономики, чтобы в будущем Вы избежали лишних затрат на реорганизацию построенного
+                        дома.
+                    </div>
+                    <a href="#" class="btn btn-secondary">Подробнее</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-reconnection-matching">
+            <div class="container">
+                <div class="reconnection-matching-info">
+                    <h4 class="reconnection-matching-title">Согласование перепланировки</h4>
+                    <div class="reconnection-matching-description">
+                        <p>Избавим Вас от необходимости разбираться в огромном количестве документов и лишней волокиты.</p>
+                        <p>Подготовим проектную документацию, согласуем перепланировку и переоборудование квартир и нежилых помещений.</p>
+                    </div>
+                    <a href="reconnection-matching.html" class="btn btn-secondary">Подробнее</a>
+                </div>
+                <img class="reconnection-matching-img" src="assets/img/reconnection-matching-img.png" alt="img">
+    </div>
+        </section>
+
+        <section class="s-authors-supervision">
+            <div class="container">
+                <img class="authors-supervision-img" src="assets/img/authors-supervision-img.png" alt="img">
+                <div class="authors-supervision-info">
+                    <h4 class="authors-supervision-title">Авторский надзор</h4>
+                    <div class="authors-supervision-description">
+                        <p>Благодаря авторскому надзору мы обеспечиваем реализацию Вашего проекта в том виде, в котором он был спроектирован.</p>
+                        <p>Осуществляем надзор на протяжении всего срока проведения отделочных работ. От начала и до завершения.</p>
+                    </div>
+                    <a href="authors-supervision.html" class="btn btn-secondary">Подробнее</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-decorating">
+            <div class="container">
+                <div class="decorating-info">
+                    <h4 class="decorating-title">Декорирование</h4>
+                    <div class="decorating-description">
+                        <p>Грамотное декорирование помещения позволяет создать единое гармоничное пространство, в котором все декоративные элементы четко подобраны друг к другу, а акценты расставлены в нужных местах.</p>
+                        <p>Именно на стадии декорирования интерьер становится целостным произведением дизайнерского искусства.</p>
+                    </div>
+                    <a href="decorating.html" class="btn btn-secondary">Подробнее</a>
+                </div>
+                <img class="s-decorating-img" src="assets/img/decorating-img.png" alt="img">
+    </div>
+        </section>
+
+        <section class="s-your-project">
+            <div class="container">
+                <img class="your-project-img" src="assets/img/your-project-img.png" alt="img">
+                <form class="your-project-form form-block">
+                    <h2 class="your-project-title">Расскажите нам о своем проекте<span></span></h2>
+                    <div class="your-project-des-cription">Разрешите нам познакомиться с вами и узнать о вашем проекте.
+                        Мы подготовим для вас индивидуальное предложение.
+                    </div>
+                    <div class="your-project-form-item">
+                        <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                    </div>
+                    <div class="your-project-form-item">
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                    </div>
+                    <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                    <input type="button" class="btn btn-warning btn-open" value="Отправить сообщение">
+                    <!--<input type="submit" class="btn btn-warning btn-open" value="Отправить сообщение">-->
+                </form>
+                <div class="card-block">
+                    <h2 class="card-block-title">Ваше сообщение отправлено!</h2>
+                    <div class="card-block-description">
+                        <p>Спасибо за ваше обращение.</p>
+                        <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                    </div>
+                    <button type="button" class="btn btn-warning btn-close-card">Закрыть окно</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <a href="index.html"><img class="footer-logo-img" src="assets/img/footer-logo.png"></a>
+                <div class="footer-logo-info">
+                    <span>2010-2022 Студия интерьера</span>
+                    <span>Custom Made, все права защищены</span>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleFooter">
+                Заказать звонок
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalToggleFooter" tabindex="-1" aria-labelledby="exampleModalToggleFooter" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalToggleFooter">Заказать звонок</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="modal-body-form">
+                                <div class="modal-body-form-item">
+                                    <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                </div>
+                                <div class="modal-body-form-item">
+                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                </div>
+                                <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalLabelFooterSent" data-bs-dismiss="modal" value="Отправить сообщение">
+                            <!--<button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalLabelFooterSent" data-bs-dismiss="modal">Отправить сообщение</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalLabelFooterSent" tabindex="-1" aria-labelledby="exampleModalLabelFooterSent" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLabelFooterSent">Вы заказали обратный звонок!</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-body-description">
+                                <p>Спасибо за ваше обращение.</p>
+                                <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <a class="footer-link" href="index.html">О нас</a>
+                    <a class="footer-link" href="portfolio.html">Портфолио</a>
+                    <a class="footer-link" href="#">Цены</a>
+                    <a class="footer-link" href="services.html">Услуги</a>
+                    <a class="footer-link" href="blog.html">Блог</a>
+                </div>
+                <div class="footer-links-column-two">
+                    <a class="footer-link" href="interior-design.html">Дизайн интерьера</a>
+                    <a class="footer-link" href="finishing-works.html">Отделочные работы</a>
+                    <a class="footer-link" href="authors-supervision.htm">Авторский надзор</a>
+                    <a class="footer-link" href="decorating.html">Декорирование</a>
+                    <a class="footer-link" href="reconnection-matching.html">Согласование перепланировки</a>
+                    <a class="footer-link" href="architectural-engineering.html">Архитектурное проектирование</a>
+                    <a class="footer-link" href="designer-furnitur.html">Авторская мебель</a>
+                </div>
+            </div>
+            <div class="footer-social-media">
+                <div class="footer-social-media-column">
+                    <div class="footer-social-media-item icon-email">cmade.spb@mail.ru</div>
+                    <div class="footer-social-media-item icon-inst">peterson.designer</div>
+                    <div class="footer-social-media-item icon-vk">peterson_designer</div>
+                </div>
+                <div class="footer-social-media-column">
+                    <div class="footer-social-media-item icon-telegram">@peterson.designer</div>
+                    <div class="footer-social-media-item icon-house">peterson.designer</div>
+                    <div class="footer-social-media-item icon-pinter">peterson.designer</div>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <div class="footer-contacts-item icon-local">
+                    <div class="city">Санкт-Петербург</div>
+                    <div class="city">ул. Уральская, 13</div>
+                </div>
+                <div class="footer-contacts-item icon-phone">
+                    <div class="phone">+7(905) 204-77-74</div>
+                    <div class="phone">+7(812) 715-02-75</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="assets/js/popper.min.js"></script>
+    <script defer src="assets/js/bootstrap.min.js"></script>
+    <script defer src="assets/js/slick.min.js"></script>
+    <script async src="assets/js/jquery.fancybox.min.js"></script>
+    <script defer src="assets/js/jquery.nice-select.min.js"></script>
+    <script defer src="assets/js/jquery-match-height.js"></script>
+    <script async src="assets/js/global.js"></script>
+
+</body>
+
+</html>

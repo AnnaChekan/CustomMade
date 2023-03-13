@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#188de7">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>Главная</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="assets/js/jQuery3.6.1.js"></script>
+</head>
+
+<body>
+
+    <div class='thetop'></div>
+    <div class='scrolltop'>
+        <div class='muve-top'></div>
+    </div>
+    <header>
+        <a href="markup.html" class="markup-link">markup</a>
+        <nav class="container navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+        <!--<img src="assets/img/logo.png" alt="logo">-->
+        <picture>
+          <source media="(min-width:992px)" srcset="assets/img/logo.png">
+          <!--<source media="(min-width:768px)" srcset="assets/img/logo-tablet.png">-->
+          <img src="assets/img/logo-mob.png" alt="logo">
+        </picture>
+      </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="about-studio.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Цены</a>
+                        </li>
+                    </ul>
+                    <div class="town">Санкт-Петербург ул. Уральская, 13</div>
+                    <button type="button" class="btn btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeader">
+                        Заказать проект
+                    </button>
+                    <div class="modal fade" id="exampleModalToggleHeader" tabindex="-1" aria-labelledby="exampleModalToggleLabelHeader" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalToggleLabelHeader">Заказать проект</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        Разрешите нам познакомиться с вами и узнать о вашем проекте. Мы подготовим для вас индивидуальное предложение.
+                                    </div>
+                                    <form class="modal-body-form">
+                                        <div class="modal-body-form-item">
+                                            <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                        </div>
+                                        <div class="modal-body-form-item">
+                                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                        </div>
+                                        <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeaderSent" data-bs-dismiss="modal" value="Отправить сообщение">
+                                    <!--<button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleHeaderSent" data-bs-dismiss="modal">Отправить сообщение</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggleHeaderSent" tabindex="-1" aria-labelledby="exampleModalLabelHeaderSent" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabelHeaderSent">Ваше сообщение отправлено!</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        <p>Спасибо за ваше обращение.</p>
+                                        <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="menu-toggler btn-menu" id="burgerMenu">
+                        <div class="burger-name">МЕНЮ</div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="nav-menu">
+                        <ul class="nav-menu-list" id="navMenu">
+                            <li class="nav-menu-item">
+                                <a href="about-studio.html" class="nav-menu-link">О нас</a>
+                            </li>
+                            <li class="nav-menu-item">
+                                <a href="services.html" class="nav-menu-link active-menu">Услуги
+                  <ul class="more-list">
+                    <li class="more-item">
+                      <a href="interior-design.html" class="more-link">Дизайн интерьера</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="finishing-works.html" class="more-link active-more">Отделочные работы</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="authors-supervision.html" class="more-link">Авторский надзор</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="decorating.html" class="more-link">Декорирование</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="reconnection-matching.html" class="more-link">Согласование перепланировки</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="architectural-engineering.html" class="more-link">Архитектурное проектирование</a>
+                            </li>
+                            <li class="more-item">
+                                <a href="designer-furnitur.html" class="more-link">Авторская мебель</a>
+                            </li>
+                        </ul>
+                </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">Стоимость</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="portfolio.html" class="nav-menu-link">Портфолио</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="blog.html" class="nav-menu-link">Блог</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="contacts.html" class="nav-menu-link">Контакты</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main class="wrapper finishing-works">
+        <section class="finishing-work-more">
+            <div class="container">
+                <div class="fwm-info">
+                    <h2 class="fwm-title">Отделочные работы</h2>
+                    <div class="fwm-description">
+                        <p>Мы предлагаем широкий спектр строительных, ремонтных и отделочных работ.</p>
+                        <p>Наши цены на отделочные работы демократичны и доступны. Вы можете убедиться в этом,
+                            просмотрев представленный ниже прайс-лист.</p>
+                    </div>
+
+                    <button type="button" class="btn btn-warning btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleFwm">
+                        Узнать стоимость
+                    </button>
+
+                    <div class="modal fade" id="exampleModalToggleFwm" tabindex="-1" aria-labelledby="exampleModalToggleLabelFwm" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalToggleLabelFwm">Узнайте стоимость работы</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        Напишите, какие отделочные работы необходимо произвести. Мы подготовим для вас индивидуальное предложение. <form class="modal-body-form">
+                                    </div>
+                                    <form class="modal-body-form">
+                                        <div class="modal-body-form-item">
+                                            <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                        </div>
+                                        <div class="modal-body-form-item">
+                                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                        </div>
+                                        <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="submit" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleFwmSent" data-bs-dismiss="modal" value="Отправить сообщение">
+                                    <!--<button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalToggleAskSent" data-bs-dismiss="modal">Отправить сообщение</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggleFwmSent" tabindex="-1" aria-labelledby="exampleModalLabelFwmSent" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabelFwmSent">Ваше сообщение отправлено!</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-body-description">
+                                        <p>Спасибо за ваше обращение.</p>
+                                        <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fwm-photo">
+                    <img class="finishing-work-more-img" src="assets/img/finishing-work-more-img.png" alt="photo">
+        </div>
+                </div>
+        </section>
+        <section class="fwm-price-list" id="priceList">
+            <div class="container">
+                <img class="price-list-img" src="assets/img/price-list-img.png">
+                <div class="price-list-info">
+                    <h2 class="price-list-title">Прайс-лист на отделочные работы</h2>
+                    <div class="slider">
+                        <div class="slides-numbers">
+                            <span class="active">01</span>
+                            <span class="total"></span>
+                        </div>
+                        <div class="single-item">
+                            <div class="slider-item">
+                                <table class="table-price">
+                                    <thead>
+                                        <tr>
+                                            <th>Подотовительные и демонтажные работы</th>
+                                            <th>Ед.изм.</th>
+                                            <th>P</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Демонтаж перегородок из пазогребня</td>
+                                            <td>м2</td>
+                                            <td>250</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж кирпичных перегородок</td>
+                                            <td>м2</td>
+                                            <td>300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Создание временной схемы электропитания</td>
+                                            <td>сист.</td>
+                                            <td>2700</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж радиаторов отопления</td>
+                                            <td>шт.</td>
+                                            <td>750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж существующей электропроводки и временного электрощита</td>
+                                            <td>шт.</td>
+                                            <td>2000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж полотенцесушителя</td>
+                                            <td>шт.</td>
+                                            <td>500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Устройство временного водоснабжения и канализации</td>
+                                            <td>сист</td>
+                                            <td>3000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="slider-item">
+                                <table class="table-price">
+                                    <thead>
+                                        <tr>
+                                            <th>Подотовительные и демонтажные работы</th>
+                                            <th>Ед.изм.</th>
+                                            <th>P</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Демонтаж перегородок из пазогребня</td>
+                                            <td>м2</td>
+                                            <td>250</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж кирпичных перегородок</td>
+                                            <td>м2</td>
+                                            <td>300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Создание временной схемы электропитания</td>
+                                            <td>сист.</td>
+                                            <td>2700</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж радиаторов отопления</td>
+                                            <td>шт.</td>
+                                            <td>750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж существующей электропроводки и временного электрощита</td>
+                                            <td>шт.</td>
+                                            <td>2000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж полотенцесушителя</td>
+                                            <td>шт.</td>
+                                            <td>500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Устройство временного водоснабжения и канализации</td>
+                                            <td>сист</td>
+                                            <td>3000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="slider-item">
+                                <table class="table-price">
+                                    <thead>
+                                        <tr>
+                                            <th>Подотовительные и демонтажные работы</th>
+                                            <th>Ед.изм.</th>
+                                            <th>P</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Демонтаж перегородок из пазогребня</td>
+                                            <td>м2</td>
+                                            <td>250</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж кирпичных перегородок</td>
+                                            <td>м2</td>
+                                            <td>300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Создание временной схемы электропитания</td>
+                                            <td>сист.</td>
+                                            <td>2700</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж радиаторов отопления</td>
+                                            <td>шт.</td>
+                                            <td>750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж существующей электропроводки и временного электрощита</td>
+                                            <td>шт.</td>
+                                            <td>2000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж полотенцесушителя</td>
+                                            <td>шт.</td>
+                                            <td>500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Устройство временного водоснабжения и канализации</td>
+                                            <td>сист</td>
+                                            <td>3000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="slider-item">
+                                <table class="table-price">
+                                    <thead>
+                                        <tr>
+                                            <th>Подотовительные и демонтажные работы</th>
+                                            <th>Ед.изм.</th>
+                                            <th>P</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Демонтаж перегородок из пазогребня</td>
+                                            <td>м2</td>
+                                            <td>250</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж кирпичных перегородок</td>
+                                            <td>м2</td>
+                                            <td>300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Создание временной схемы электропитания</td>
+                                            <td>сист.</td>
+                                            <td>2700</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж радиаторов отопления</td>
+                                            <td>шт.</td>
+                                            <td>750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж существующей электропроводки и временного электрощита</td>
+                                            <td>шт.</td>
+                                            <td>2000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Демонтаж полотенцесушителя</td>
+                                            <td>шт.</td>
+                                            <td>500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Устройство временного водоснабжения и канализации</td>
+                                            <td>сист</td>
+                                            <td>3000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h4 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Подотовительные и демонтажные работы 
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </h4>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="table-price">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>P</th>
+                                                <th>Ед.изм.</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Демонтаж перегородок из пазогребня</td>
+                                                <td>250</td>
+                                                <td>м2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Демонтаж кирпичных перегородок</td>
+                                                <td>300</td>
+                                                <td>м2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Создание временной схемы электропитания</td>
+                                                <td>2700</td>
+                                                <td>сист.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Демонтаж радиаторов отопления</td>
+                                                <td>750</td>
+                                                <td>шт.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Демонтаж существующей электропроводки и временного электрощита</td>
+                                                <td>2000</td>
+                                                <td>шт.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Демонтаж полотенцесушителя</td>
+                                                <td>500</td>
+                                                <td>шт.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Устройство временного водоснабжения и канализации</td>
+                                                <td>3000</td>
+                                                <td>сист</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h4 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" style="background-color: #262626;">
+                            Сантехнические работы 
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </h4>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    text
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h4 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Электромонтажные работы 
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </h4>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    text
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h4 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour" style="background-color: #262626;">
+                            Устройство стен 
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </h4>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    text
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h4 class="accordion-header" id="flush-headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            Устройство потолков 
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </h4>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    text
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h4 class="accordion-header" id="flush-headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix" style="background-color: #262626;">
+                            Полы 
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </h4>
+                            <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    text
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h4 class="accordion-header" id="flush-headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                            Штукатурные работы 
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </h4>
+                            <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    text
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h4 class="accordion-header" id="flush-headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight" style="background-color: #262626;">
+                            Плиточные работы 
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </h4>
+                            <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    text
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h4 class="accordion-header" id="flush-headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                            Малярные работы 
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </h4>
+                            <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    text
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h4 class="accordion-header" id="flush-headingTen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen" style="background-color: #262626;">
+                            Прочие работы 
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </h4>
+                            <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    text
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="price-list-img-mob" src="assets/img/price-list-img.png">
+    </div>
+        </section>
+        <section class="fwm-advantages">
+            <div class="container">
+                <h2 class="fwm-advantages-title">Наши преимущества</h2>
+                <div class="fwm-advantages-info">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="fwm-advantages-img" src="assets/img/advantages-icon5.png">
+                            <div class="fwm-advantages-text">
+                                <h4 class="fwm-advantages-text-title">Опыт работы более 10 лет</h4>
+                                <div class="fwm-advantages-text-deacription">Осуществляем задачи любой
+                                    сложности - высокий профессионализм специалистов выполнить любые идеи
+                                    дизайнеров с премиальным качеством работ.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="fwm-advantages-img" src="assets/img/advantages-icon6.png">
+                            <div class="fwm-advantages-text">
+                                <h4 class="fwm-advantages-text-title">Страхование и гарантии</h4>
+                                <div class="fwm-advantages-text-deacription">Добровольное страхование объекта на
+                                    весь период отделочных работ. Бесплатно исправляем все выявленные недочёты в
+                                    течение двух лет после окончания ремонта.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="fwm-advantages-img" src="assets/img/advantages-icon1.png">
+                            <div class="fwm-advantages-text">
+                                <h4 class="fwm-advantages-text-title">Комплексный подход</h4>
+                                <div class="fwm-advantages-text-deacription">Отвечаем за объект в целом. Гарантируем
+                                    качество работ и обязательность смежников. Организация всех подрядчиков по единому
+                                    графику сокращает сроки реализации объекта.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="fwm-advantages-img icon-advantages-seven" src="assets/img/advantages-icon7.png">
+                            <div class="fwm-advantages-text">
+                                <h4 class="fwm-advantages-text-title">Принцип одного окна</h4>
+                                <div class="fwm-advantages-text-deacription">Работа в команде дизайнера и производителя
+                                    работ позволяет оперативно решать все вопросы без Вашего прямого участия и вовлечения
+                                    в проект, экономит Ваше время и нервы.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="fwm-advantages-img" src="assets/img/advantages-icon2.png">
+                            <div class="fwm-advantages-text">
+                                <h4 class="fwm-advantages-text-title">Гарантированные сроки</h4>
+                                <div class="fwm-advantages-text-deacription">Выполняя абсолютно все работы, самостоятельно
+                                    контролируя поставки материалов, гарантируем минимальные сроки производства работ.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="fwm-advantages-img" src="assets/img/advantages-icon3.png">
+                            <div class="fwm-advantages-text">
+                                <h4 class="fwm-advantages-text-title">Удобная оплата</h4>
+                                <div class="fwm-advantages-text-deacription">Равномерное распределение оплаты работ на весь
+                                    период строительства. Прозрачнось отчетности с ежемесячными фотоотчетами и актами
+                                    выполенных работ.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="fwm-insurance-and-warranty">
+            <div class="container">
+                <img class="insurance-and-warranty-img-mob" src="assets/img/insurance-and-warranty-img-mob.png" alt="photo">
+                <div class="iw-info">
+                    <h2 class="iw-title">Страхование и гарантия</h2>
+                    <div class="iw-item">
+                        <h4 class="iw-item-title">Высочайший уровень выполения</h4>
+                        <div class="iw-item-description">
+                            <p>Мы гарантируем выполнение всех типов работ на высочайшем уровне с
+                                соблюдением всех эстетических и технических требований.
+                            </p>
+                            <p>Все работы проводятся в строгом соответствии с законодательством РФ в
+                                сфере строительства, ГОСТ, СНиП другими нормативными и руководящими документами.
+                            </p>
+                            <p>Качество выполняемых нами работ подтверждают отзывы наших многочисленных заказчиков.</p>
+                        </div>
+                    </div>
+                    <div class="iw-item">
+                        <h4 class="iw-item-title">Страхование на время ремонта</h4>
+                        <div class="iw-item-description">Страхование квартиры на время ремонта и на время действия гарантийных
+                            обязательств поможет избежать имущественных споров между Вами и третьими лицами.
+                        </div>
+                    </div>
+                    <div class="iw-item">
+                        <h4 class="iw-item-title">Гарантийный срок - 2 года</h4>
+                        <div class="iw-item-description">Нашей компанией установлен гарантийный срок 24 месяца
+                            (2 года) со дня сдачи объекта заказчику. Гарантия распространяется на все работы,
+                            предоставляемые нашей фирмой.
+                        </div>
+                    </div>
+                    <div class="iw-item">
+                        <h4 class="iw-item-title">Гарантийное обслуживание оборудования</h4>
+                        <div class="iw-item-description">В случае поставки нами оборудования на которое распространяется
+                            заводская гарантия, гарантийное обслуживание и ремонт производится фирмой производителем.
+                        </div>
+                    </div>
+                    <div class="iw-item">
+                        <h4 class="iw-item-title">Мы на связи</h4>
+                        <div class="iw-item-description">Мы оперативно реагируем на гарантийные обращения
+                            и незамедлительно устраняем выявленные недостатки
+                            и гордимся тем, что это происходит довольно редко.
+                        </div>
+                    </div>
+                </div>
+                <div class="iw-photo">
+                    <img class="insurance-and-warranty-img" src="assets/img/insurance-and-warranty-img.png" alt="photo">
+        </div>
+                </div>
+        </section>
+        <section class="fwm-completed-projects">
+            <div class="container">
+                <h2 class="completed-projects-title">Реализованные проекты</h2>
+                <div class="slider">
+                    <div class="slides-numbers" style="display: block;">
+                        <span class="active">01</span>
+                        <span class="total"></span>
+                    </div>
+                    <div class="single-item">
+                        <div class="slider-item">
+                            <div class="slider-item-one">
+                                <div class="completed-projects-column">
+                                    <img src="assets/img/completed-projects-img1.png">
+                                    <img src="assets/img/completed-projects-img2.png">
+                        </div>
+                                    <div class="completed-projects-column">
+                                        <img src="assets/img/completed-projects-img3.png">
+                        </div>
+                                        <div class="completed-projects-column">
+                                            <div class="completed-projects-row">
+                                                <img src="assets/img/completed-projects-img4.png">
+                                                <img src="assets/img/completed-projects-img5.png">
+                            </div>
+                                                <img src="assets/img/completed-projects-img6.png">
+                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-item">
+                                            <div class="slider-item-one">
+                                                <div class="completed-projects-column">
+                                                    <img src="assets/img/completed-projects-img1.png">
+                                                    <img src="assets/img/completed-projects-img2.png">
+                        </div>
+                                                    <div class="completed-projects-column">
+                                                        <img src="assets/img/completed-projects-img3.png">
+                        </div>
+                                                        <div class="completed-projects-column">
+                                                            <div class="completed-projects-row">
+                                                                <img src="assets/img/completed-projects-img4.png">
+                                                                <img src="assets/img/completed-projects-img5.png">
+                            </div>
+                                                                <img src="assets/img/completed-projects-img6.png">
+                        </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="completed-projects-img">
+                                                    <img class="completed-projects-img-item" src="assets/img/completed-projects-img1.png">
+                                                    <img class="completed-projects-img-item" src="assets/img/completed-projects-img2-mob.png">
+                                                    <img class="completed-projects-img-item" src="assets/img/completed-projects-img3.png">
+                                                    <img class="completed-projects-img-item" src="assets/img/completed-projects-img4-mob.png">
+                                                    <img class="completed-projects-img-item" src="assets/img/completed-projects-img5-mob.png">
+                                                    <img class="completed-projects-img-item" src="assets/img/completed-projects-img6.png">
+                                                    <img class="completed-projects-img-item" src="assets/img/completed-projects-img1.png">
+                                                    <img class="completed-projects-img-item" src="assets/img/completed-projects-img2-mob.png">
+                                                    <img class="completed-projects-img-item" src="assets/img/completed-projects-img3.png">
+                                                    <img class="completed-projects-img-item" src="assets/img/completed-projects-img4-mob.png">
+                                                    <img class="completed-projects-img-item" src="assets/img/completed-projects-img5-mob.png">
+                                                    <img class="completed-projects-img-item" src="assets/img/completed-projects-img6.png">
+                                                    <button type="button" class="btn btn-primary" id="btnMorePhoto">Загрузить еще</button>
+                                                </div>
+                                            </div>
+        </section>
+        <main class="fwm-sample-comtract">
+            <div class="container">
+                <h2 class="sample-comtract-title">Образец договора<span></span></h2>
+                <div class="sample-comtract-block">
+                    <div class="sample-comtract-description">Ознакомтесь с образцом договора на осуществление ремонтных
+                        и отделочных работ в студии Custom Made
+                    </div>
+                    <a href="assets/doc/Образец договора.docx" download class="btn btn-warning">Скачать договоры</a>
+                </div>
+            </div>
+        </main>
+
+
+        <main class="fwm-other-types-work">
+            <div class="container">
+                <form class="other-types-work-form form-block">
+                    <h2 class="other-types-work-form-title">Интересуют другие виды работ?</h2>
+                    <div class="other-types-work-form-item">
+                        <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                    </div>
+                    <div class="other-types-work-form-item">
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                    </div>
+                    <input type="button" class="btn btn-warning btn-open" value="Заказать звонок">
+                </form>
+                <div class="card-block">
+                    <h2 class="card-block-title">Ваше сообщение отправлено!</h2>
+                    <div class="card-block-description">
+                        <p>Спасибо за ваше обращение.</p>
+                        <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                    </div>
+                    <button type="button" class="btn btn-warning btn-close-card">Закрыть окно</button>
+                </div>
+            </div>
+        </main>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <a href="index.html"><img class="footer-logo-img" src="assets/img/footer-logo.png"></a>
+                <div class="footer-logo-info">
+                    <span>2010-2022 Студия интерьера</span>
+                    <span>Custom Made, все права защищены</span>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggleFooter">
+                Заказать звонок
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalToggleFooter" tabindex="-1" aria-labelledby="exampleModalToggleFooter" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalToggleFooter">Заказать звонок</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="modal-body-form">
+                                <div class="modal-body-form-item">
+                                    <input type="text" id="fname" name="fname" placeholder="Как к вам обращаться">
+                                </div>
+                                <div class="modal-body-form-item">
+                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Номер телефона">
+                                </div>
+                                <textarea id="comment" name="comment" rows="1" cols="40" placeholder="Ваше сообщение"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalLabelFooterSent" data-bs-dismiss="modal" value="Отправить сообщение">
+                            <!--<button type="button" class="btn btn-warning btn-send" data-bs-toggle="modal" data-bs-target="#exampleModalLabelFooterSent" data-bs-dismiss="modal">Отправить сообщение</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalLabelFooterSent" tabindex="-1" aria-labelledby="exampleModalLabelFooterSent" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLabelFooterSent">Вы заказали обратный звонок!</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-body-description">
+                                <p>Спасибо за ваше обращение.</p>
+                                <p>Мы свяжемся с Вами в ближайшее время, чтобы проконсультировать по Вашему проекту.</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-dismiss="modal">Закрыть окно</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <a class="footer-link" href="index.html">О нас</a>
+                    <a class="footer-link" href="portfolio.html">Портфолио</a>
+                    <a class="footer-link" href="#">Цены</a>
+                    <a class="footer-link" href="services.html">Услуги</a>
+                    <a class="footer-link" href="blog.html">Блог</a>
+                </div>
+                <div class="footer-links-column-two">
+                    <a class="footer-link" href="interior-design.html">Дизайн интерьера</a>
+                    <a class="footer-link" href="finishing-works.html">Отделочные работы</a>
+                    <a class="footer-link" href="authors-supervision.htm">Авторский надзор</a>
+                    <a class="footer-link" href="decorating.html">Декорирование</a>
+                    <a class="footer-link" href="reconnection-matching.html">Согласование перепланировки</a>
+                    <a class="footer-link" href="architectural-engineering.html">Архитектурное проектирование</a>
+                    <a class="footer-link" href="designer-furnitur.html">Авторская мебель</a>
+                </div>
+            </div>
+            <div class="footer-social-media">
+                <div class="footer-social-media-column">
+                    <div class="footer-social-media-item icon-email">cmade.spb@mail.ru</div>
+                    <div class="footer-social-media-item icon-inst">peterson.designer</div>
+                    <div class="footer-social-media-item icon-vk">peterson_designer</div>
+                </div>
+                <div class="footer-social-media-column">
+                    <div class="footer-social-media-item icon-telegram">@peterson.designer</div>
+                    <div class="footer-social-media-item icon-house">peterson.designer</div>
+                    <div class="footer-social-media-item icon-pinter">peterson.designer</div>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <div class="footer-contacts-item icon-local">
+                    <div class="city">Санкт-Петербург</div>
+                    <div class="city">ул. Уральская, 13</div>
+                </div>
+                <div class="footer-contacts-item icon-phone">
+                    <div class="phone">+7(905) 204-77-74</div>
+                    <div class="phone">+7(812) 715-02-75</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="assets/js/popper.min.js"></script>
+    <script defer src="assets/js/bootstrap.min.js"></script>
+    <script defer src="assets/js/slick.min.js"></script>
+    <script async src="assets/js/jquery.fancybox.min.js"></script>
+    <script defer src="assets/js/jquery.nice-select.min.js"></script>
+    <script defer src="assets/js/jquery-match-height.js"></script>
+    <script async src="assets/js/global.js"></script>
+
+</body>
+
+</html>
